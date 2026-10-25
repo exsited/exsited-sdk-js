@@ -1,0 +1,90 @@
+/** Path templates and body keys for the settings endpoints. */
+
+export const CUSTOM_OBJECTS = '/api/{api_version}/custom_objects';
+export const SETTINGS = '/api/{api_version}/settings';
+export const CUSTOM_OBJECT = '/api/{api_version}/custom_objects/{custom_object_id}';
+export const SETTINGS_CURRENCIES = '/api/{api_version}/settings/currencies';
+export const SETTINGS_CUSTOM_LOGIC_SCRIPTS = '/api/{api_version}/settings/custom_logic_scripts';
+export const SETTINGS_CUSTOM_OBJECTS = '/api/{api_version}/settings/custom_objects';
+export const SETTINGS_DISCOUNT_PROFILES = '/api/{api_version}/settings/discount_profiles';
+export const SETTINGS_ITEM_GROUPS = '/api/{api_version}/settings/item_groups';
+export const SETTINGS_PAYMENT_PROCESSORS = '/api/{api_version}/settings/payment_processors';
+export const SETTINGS_PAYMENT_TERMS = '/api/{api_version}/settings/payment_terms';
+export const SETTINGS_PRICING_LEVELS = '/api/{api_version}/settings/pricing_levels';
+export const SETTINGS_SHIPPING_PROFILES = '/api/{api_version}/settings/shipping_profiles';
+export const SETTINGS_TAXES = '/api/{api_version}/settings/taxes';
+export const SETTINGS_TIME_ZONES = '/api/{api_version}/settings/time_zones';
+export const SETTINGS_VARIATIONS = '/api/{api_version}/settings/variations';
+export const SETTINGS_WAREHOUSES = '/api/{api_version}/settings/warehouses';
+export const SETTINGS_CURRENCY = '/api/{api_version}/settings/currencies/{currency_id}';
+export const SETTINGS_CUSTOM_LOGIC_SCRIPT = '/api/{api_version}/settings/custom_logic_scripts/{custom_logic_script_id}';
+export const SETTINGS_CUSTOM_OBJECT = '/api/{api_version}/settings/custom_objects/{custom_object_id}';
+export const SETTINGS_FIELD_SETTINGS_ACCOUNT = '/api/{api_version}/settings/field_settings/account';
+export const SETTINGS_FIELD_SETTINGS_ITEM = '/api/{api_version}/settings/field_settings/item';
+export const SETTINGS_GENERAL_SETTINGS_ACCOUNT = '/api/{api_version}/settings/general_settings/account';
+export const SETTINGS_GENERAL_SETTINGS_ITEM = '/api/{api_version}/settings/general_settings/item';
+export const SETTINGS_ITEM_GROUP = '/api/{api_version}/settings/item_groups/{item_group_id}';
+export const SETTINGS_TIME_ZONE = '/api/{api_version}/settings/time_zones/{time_zone_id}';
+export const SETTINGS_VARIATION = '/api/{api_version}/settings/variations/{variation_id}';
+export const SETTINGS_CUSTOM_OBJECT_CUSTOMIZE =
+    '/api/{api_version}/settings/custom_objects/{custom_object_id}/customize';
+export const SETTINGS_ITEM_GROUP_BILLING_PREFERENCES =
+    '/api/{api_version}/settings/item_groups/{item_group_id}/billing_preferences';
+export const SETTINGS_DISCOUNT_PROFILE = '/api/{api_version}/settings/discount_profiles/{discount_profile_id}';
+export const SETTINGS_FIELD_SETTINGS = '/api/{api_version}/settings/field_settings';
+export const SETTINGS_FIELD_SETTING = '/api/{api_version}/settings/field_settings/{field_setting_id}';
+export const SETTINGS_GENERAL_SETTINGS_GROUP = '/api/{api_version}/settings/general_settings/{group}';
+export const SETTINGS_GENERAL_SETTING = '/api/{api_version}/settings/general_settings/{group}/{general_setting_id}';
+export const SETTINGS_GENERAL_SETTINGS_DASHBOARD = '/api/{api_version}/settings/general_settings/dashboard';
+export const SETTINGS_GENERAL_SETTINGS_DATE_AND_TIME = '/api/{api_version}/settings/general_settings/date_and_time';
+export const SETTINGS_GENERAL_SETTINGS_DISPLAY = '/api/{api_version}/settings/general_settings/display';
+export const SETTINGS_GENERAL_SETTINGS_GENERAL = '/api/{api_version}/settings/general_settings/general';
+export const SETTINGS_GENERAL_SETTINGS_LABOUR = '/api/{api_version}/settings/general_settings/labour';
+export const SETTINGS_GENERAL_SETTINGS_ORDER = '/api/{api_version}/settings/general_settings/order';
+export const SETTINGS_GENERAL_SETTINGS_PORTAL = '/api/{api_version}/settings/general_settings/portal';
+export const SETTINGS_GENERAL_SETTINGS_PURCHASE = '/api/{api_version}/settings/general_settings/purchase';
+export const SETTINGS_GENERAL_SETTINGS_SECURITY = '/api/{api_version}/settings/general_settings/security';
+export const SETTINGS_GENERAL_SETTINGS_TRANSACTION = '/api/{api_version}/settings/general_settings/transaction';
+export const SETTINGS_PAYMENT_PROCESSOR = '/api/{api_version}/settings/payment_processors/{payment_processor_id}';
+export const SETTINGS_PAYMENT_TERM = '/api/{api_version}/settings/payment_terms/{payment_term_id}';
+export const SETTINGS_PRICING_LEVEL = '/api/{api_version}/settings/pricing_levels/{pricing_level_id}';
+export const SETTINGS_SHIPPING_PROFILE = '/api/{api_version}/settings/shipping_profiles/{shipping_profile_id}';
+export const SETTINGS_TAX = '/api/{api_version}/settings/taxes/{tax_id}';
+export const SETTINGS_WAREHOUSE = '/api/{api_version}/settings/warehouses/{warehouse_id}';
+
+/** The key a listing's records sit under. */
+export const CUSTOM_OBJECTS_KEY = 'data';
+export const SETTINGS_CURRENCIES_KEY = 'data';
+export const SETTINGS_CUSTOM_LOGIC_SCRIPTS_KEY = 'data';
+export const SETTINGS_DISCOUNT_PROFILES_KEY = 'data';
+export const SETTINGS_ITEM_GROUPS_KEY = 'data';
+export const SETTINGS_PAYMENT_PROCESSORS_KEY = 'data';
+export const SETTINGS_PAYMENT_TERMS_KEY = 'data';
+export const SETTINGS_PRICING_LEVELS_KEY = 'data';
+export const SETTINGS_SHIPPING_PROFILES_KEY = 'data';
+export const SETTINGS_TAXES_KEY = 'data';
+export const SETTINGS_TIME_ZONES_KEY = 'data';
+export const SETTINGS_VARIATIONS_KEY = 'data';
+export const SETTINGS_WAREHOUSES_KEY = 'data';
+export const SETTINGS_FIELD_SETTINGS_ACCOUNT_KEY = 'data';
+export const SETTINGS_FIELD_SETTINGS_ITEM_KEY = 'data';
+export const SETTINGS_FIELD_SETTINGS_KEY = 'data';
+
+/** The envelope one record arrives under. */
+export const CURRENCY_KEY = 'currency';
+export const CUSTOM_LOGIC_SCRIPT_KEY = 'custom_logic_script';
+export const CUSTOM_OBJECT_KEY = 'custom_object';
+export const ITEM_GROUP_KEY = 'item_group';
+export const SETTINGS_KEY = 'settings';
+export const TIME_ZONE_KEY = 'time_zone';
+export const VARIATION_KEY = 'variation';
+export const GENERAL_SETTINGS_KEY = 'general_settings';
+export const DISCOUNT_PROFILE_KEY = 'discount_profile';
+export const FIELD_SETTING_KEY = 'field_setting';
+export const GENERAL_SETTING_KEY = 'general_setting';
+export const PAYMENT_PROCESSOR_KEY = 'payment_processor';
+export const PAYMENT_TERM_KEY = 'payment_term';
+export const PRICING_LEVEL_KEY = 'pricing_level';
+export const SHIPPING_PROFILE_KEY = 'shipping_profile';
+export const TAX_KEY = 'tax';
+export const WAREHOUSE_KEY = 'warehouse';

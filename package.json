@@ -1,0 +1,3342 @@
+{
+    "name": "exsited",
+    "version": "4.0.0",
+    "description": "TypeScript SDK for the Exsited v4 REST API.",
+    "license": "MIT",
+    "author": "Ashiq Rahman <ashiq@webalive.com.au>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/exsited/exsited-sdk-js.git"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=18.17"
+    },
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/esm/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/esm/index.d.ts",
+                "default": "./dist/esm/index.js"
+            },
+            "require": {
+                "types": "./dist/cjs/index.d.ts",
+                "default": "./dist/cjs/index.js"
+            }
+        },
+        "./redaction": {
+            "import": {
+                "types": "./dist/esm/redaction.d.ts",
+                "default": "./dist/esm/redaction.js"
+            },
+            "require": {
+                "types": "./dist/cjs/redaction.d.ts",
+                "default": "./dist/cjs/redaction.js"
+            }
+        },
+        "./errors": {
+            "import": {
+                "types": "./dist/esm/errors.d.ts",
+                "default": "./dist/esm/errors.js"
+            },
+            "require": {
+                "types": "./dist/cjs/errors.d.ts",
+                "default": "./dist/cjs/errors.js"
+            }
+        },
+        "./dto": {
+            "import": {
+                "types": "./dist/esm/dto.d.ts",
+                "default": "./dist/esm/dto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/dto.d.ts",
+                "default": "./dist/cjs/dto.js"
+            }
+        },
+        "./config/authConfig": {
+            "import": {
+                "types": "./dist/esm/config/authConfig.d.ts",
+                "default": "./dist/esm/config/authConfig.js"
+            },
+            "require": {
+                "types": "./dist/cjs/config/authConfig.d.ts",
+                "default": "./dist/cjs/config/authConfig.js"
+            }
+        },
+        "./config/sdkConfig": {
+            "import": {
+                "types": "./dist/esm/config/sdkConfig.d.ts",
+                "default": "./dist/esm/config/sdkConfig.js"
+            },
+            "require": {
+                "types": "./dist/cjs/config/sdkConfig.d.ts",
+                "default": "./dist/cjs/config/sdkConfig.js"
+            }
+        },
+        "./http/retryPolicy": {
+            "import": {
+                "types": "./dist/esm/http/retryPolicy.d.ts",
+                "default": "./dist/esm/http/retryPolicy.js"
+            },
+            "require": {
+                "types": "./dist/cjs/http/retryPolicy.d.ts",
+                "default": "./dist/cjs/http/retryPolicy.js"
+            }
+        },
+        "./http/queryParams": {
+            "import": {
+                "types": "./dist/esm/http/queryParams.d.ts",
+                "default": "./dist/esm/http/queryParams.js"
+            },
+            "require": {
+                "types": "./dist/cjs/http/queryParams.d.ts",
+                "default": "./dist/cjs/http/queryParams.js"
+            }
+        },
+        "./http/urlBuilder": {
+            "import": {
+                "types": "./dist/esm/http/urlBuilder.d.ts",
+                "default": "./dist/esm/http/urlBuilder.js"
+            },
+            "require": {
+                "types": "./dist/cjs/http/urlBuilder.d.ts",
+                "default": "./dist/cjs/http/urlBuilder.js"
+            }
+        },
+        "./http/transport": {
+            "import": {
+                "types": "./dist/esm/http/transport.d.ts",
+                "default": "./dist/esm/http/transport.js"
+            },
+            "require": {
+                "types": "./dist/cjs/http/transport.d.ts",
+                "default": "./dist/cjs/http/transport.js"
+            }
+        },
+        "./auth/tokenStore": {
+            "import": {
+                "types": "./dist/esm/auth/tokenStore.d.ts",
+                "default": "./dist/esm/auth/tokenStore.js"
+            },
+            "require": {
+                "types": "./dist/cjs/auth/tokenStore.d.ts",
+                "default": "./dist/cjs/auth/tokenStore.js"
+            }
+        },
+        "./auth/tokenProvider": {
+            "import": {
+                "types": "./dist/esm/auth/tokenProvider.d.ts",
+                "default": "./dist/esm/auth/tokenProvider.js"
+            },
+            "require": {
+                "types": "./dist/cjs/auth/tokenProvider.d.ts",
+                "default": "./dist/cjs/auth/tokenProvider.js"
+            }
+        },
+        "./client/apiResponse": {
+            "import": {
+                "types": "./dist/esm/client/apiResponse.d.ts",
+                "default": "./dist/esm/client/apiResponse.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/apiResponse.d.ts",
+                "default": "./dist/cjs/client/apiResponse.js"
+            }
+        },
+        "./client/logging": {
+            "import": {
+                "types": "./dist/esm/client/logging.d.ts",
+                "default": "./dist/esm/client/logging.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/logging.d.ts",
+                "default": "./dist/cjs/client/logging.js"
+            }
+        },
+        "./client/resourceBinding": {
+            "import": {
+                "types": "./dist/esm/client/resourceBinding.d.ts",
+                "default": "./dist/esm/client/resourceBinding.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/resourceBinding.d.ts",
+                "default": "./dist/cjs/client/resourceBinding.js"
+            }
+        },
+        "./client/exsitedClient": {
+            "import": {
+                "types": "./dist/esm/client/exsitedClient.d.ts",
+                "default": "./dist/esm/client/exsitedClient.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/exsitedClient.d.ts",
+                "default": "./dist/cjs/client/exsitedClient.js"
+            }
+        },
+        "./client/clientRegistry": {
+            "import": {
+                "types": "./dist/esm/client/clientRegistry.d.ts",
+                "default": "./dist/esm/client/clientRegistry.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/clientRegistry.d.ts",
+                "default": "./dist/cjs/client/clientRegistry.js"
+            }
+        },
+        "./client/pagination": {
+            "import": {
+                "types": "./dist/esm/client/pagination.d.ts",
+                "default": "./dist/esm/client/pagination.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/pagination.d.ts",
+                "default": "./dist/cjs/client/pagination.js"
+            }
+        },
+        "./client/console": {
+            "import": {
+                "types": "./dist/esm/client/console.d.ts",
+                "default": "./dist/esm/client/console.js"
+            },
+            "require": {
+                "types": "./dist/cjs/client/console.d.ts",
+                "default": "./dist/cjs/client/console.js"
+            }
+        },
+        "./resources/abaFiles/abaFiles": {
+            "import": {
+                "types": "./dist/esm/resources/abaFiles/abaFiles.d.ts",
+                "default": "./dist/esm/resources/abaFiles/abaFiles.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/abaFiles/abaFiles.d.ts",
+                "default": "./dist/cjs/resources/abaFiles/abaFiles.js"
+            }
+        },
+        "./resources/abaFiles/abaFilesDto": {
+            "import": {
+                "types": "./dist/esm/resources/abaFiles/abaFilesDto.d.ts",
+                "default": "./dist/esm/resources/abaFiles/abaFilesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/abaFiles/abaFilesDto.d.ts",
+                "default": "./dist/cjs/resources/abaFiles/abaFilesDto.js"
+            }
+        },
+        "./resources/abaFiles/abaFilesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/abaFiles/abaFilesUrls.d.ts",
+                "default": "./dist/esm/resources/abaFiles/abaFilesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/abaFiles/abaFilesUrls.d.ts",
+                "default": "./dist/cjs/resources/abaFiles/abaFilesUrls.js"
+            }
+        },
+        "./resources/accountEmails/accountEmails": {
+            "import": {
+                "types": "./dist/esm/resources/accountEmails/accountEmails.d.ts",
+                "default": "./dist/esm/resources/accountEmails/accountEmails.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountEmails/accountEmails.d.ts",
+                "default": "./dist/cjs/resources/accountEmails/accountEmails.js"
+            }
+        },
+        "./resources/accountEmails/accountEmailsDto": {
+            "import": {
+                "types": "./dist/esm/resources/accountEmails/accountEmailsDto.d.ts",
+                "default": "./dist/esm/resources/accountEmails/accountEmailsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountEmails/accountEmailsDto.d.ts",
+                "default": "./dist/cjs/resources/accountEmails/accountEmailsDto.js"
+            }
+        },
+        "./resources/accountEmails/accountEmailsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/accountEmails/accountEmailsUrls.d.ts",
+                "default": "./dist/esm/resources/accountEmails/accountEmailsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountEmails/accountEmailsUrls.d.ts",
+                "default": "./dist/cjs/resources/accountEmails/accountEmailsUrls.js"
+            }
+        },
+        "./resources/accountGroups/accountGroups": {
+            "import": {
+                "types": "./dist/esm/resources/accountGroups/accountGroups.d.ts",
+                "default": "./dist/esm/resources/accountGroups/accountGroups.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountGroups/accountGroups.d.ts",
+                "default": "./dist/cjs/resources/accountGroups/accountGroups.js"
+            }
+        },
+        "./resources/accountGroups/accountGroupsDto": {
+            "import": {
+                "types": "./dist/esm/resources/accountGroups/accountGroupsDto.d.ts",
+                "default": "./dist/esm/resources/accountGroups/accountGroupsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountGroups/accountGroupsDto.d.ts",
+                "default": "./dist/cjs/resources/accountGroups/accountGroupsDto.js"
+            }
+        },
+        "./resources/accountGroups/accountGroupsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/accountGroups/accountGroupsUrls.d.ts",
+                "default": "./dist/esm/resources/accountGroups/accountGroupsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountGroups/accountGroupsUrls.d.ts",
+                "default": "./dist/cjs/resources/accountGroups/accountGroupsUrls.js"
+            }
+        },
+        "./resources/accountingCodes/accountingCodes": {
+            "import": {
+                "types": "./dist/esm/resources/accountingCodes/accountingCodes.d.ts",
+                "default": "./dist/esm/resources/accountingCodes/accountingCodes.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountingCodes/accountingCodes.d.ts",
+                "default": "./dist/cjs/resources/accountingCodes/accountingCodes.js"
+            }
+        },
+        "./resources/accountingCodes/accountingCodesDto": {
+            "import": {
+                "types": "./dist/esm/resources/accountingCodes/accountingCodesDto.d.ts",
+                "default": "./dist/esm/resources/accountingCodes/accountingCodesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountingCodes/accountingCodesDto.d.ts",
+                "default": "./dist/cjs/resources/accountingCodes/accountingCodesDto.js"
+            }
+        },
+        "./resources/accountingCodes/accountingCodesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/accountingCodes/accountingCodesUrls.d.ts",
+                "default": "./dist/esm/resources/accountingCodes/accountingCodesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accountingCodes/accountingCodesUrls.d.ts",
+                "default": "./dist/cjs/resources/accountingCodes/accountingCodesUrls.js"
+            }
+        },
+        "./resources/accounts/accounts": {
+            "import": {
+                "types": "./dist/esm/resources/accounts/accounts.d.ts",
+                "default": "./dist/esm/resources/accounts/accounts.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accounts/accounts.d.ts",
+                "default": "./dist/cjs/resources/accounts/accounts.js"
+            }
+        },
+        "./resources/accounts/accountsDto": {
+            "import": {
+                "types": "./dist/esm/resources/accounts/accountsDto.d.ts",
+                "default": "./dist/esm/resources/accounts/accountsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accounts/accountsDto.d.ts",
+                "default": "./dist/cjs/resources/accounts/accountsDto.js"
+            }
+        },
+        "./resources/accounts/accountsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/accounts/accountsUrls.d.ts",
+                "default": "./dist/esm/resources/accounts/accountsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/accounts/accountsUrls.d.ts",
+                "default": "./dist/cjs/resources/accounts/accountsUrls.js"
+            }
+        },
+        "./resources/actionScripts/actionScripts": {
+            "import": {
+                "types": "./dist/esm/resources/actionScripts/actionScripts.d.ts",
+                "default": "./dist/esm/resources/actionScripts/actionScripts.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/actionScripts/actionScripts.d.ts",
+                "default": "./dist/cjs/resources/actionScripts/actionScripts.js"
+            }
+        },
+        "./resources/actionScripts/actionScriptsDto": {
+            "import": {
+                "types": "./dist/esm/resources/actionScripts/actionScriptsDto.d.ts",
+                "default": "./dist/esm/resources/actionScripts/actionScriptsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/actionScripts/actionScriptsDto.d.ts",
+                "default": "./dist/cjs/resources/actionScripts/actionScriptsDto.js"
+            }
+        },
+        "./resources/actionScripts/actionScriptsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/actionScripts/actionScriptsUrls.d.ts",
+                "default": "./dist/esm/resources/actionScripts/actionScriptsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/actionScripts/actionScriptsUrls.d.ts",
+                "default": "./dist/cjs/resources/actionScripts/actionScriptsUrls.js"
+            }
+        },
+        "./resources/additionalCodes/additionalCodes": {
+            "import": {
+                "types": "./dist/esm/resources/additionalCodes/additionalCodes.d.ts",
+                "default": "./dist/esm/resources/additionalCodes/additionalCodes.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/additionalCodes/additionalCodes.d.ts",
+                "default": "./dist/cjs/resources/additionalCodes/additionalCodes.js"
+            }
+        },
+        "./resources/additionalCodes/additionalCodesDto": {
+            "import": {
+                "types": "./dist/esm/resources/additionalCodes/additionalCodesDto.d.ts",
+                "default": "./dist/esm/resources/additionalCodes/additionalCodesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/additionalCodes/additionalCodesDto.d.ts",
+                "default": "./dist/cjs/resources/additionalCodes/additionalCodesDto.js"
+            }
+        },
+        "./resources/additionalCodes/additionalCodesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/additionalCodes/additionalCodesUrls.d.ts",
+                "default": "./dist/esm/resources/additionalCodes/additionalCodesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/additionalCodes/additionalCodesUrls.d.ts",
+                "default": "./dist/cjs/resources/additionalCodes/additionalCodesUrls.js"
+            }
+        },
+        "./resources/alertResponsibilities/alertResponsibilities": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibilities/alertResponsibilities.d.ts",
+                "default": "./dist/esm/resources/alertResponsibilities/alertResponsibilities.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibilities/alertResponsibilities.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibilities/alertResponsibilities.js"
+            }
+        },
+        "./resources/alertResponsibilities/alertResponsibilitiesDto": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibilities/alertResponsibilitiesDto.d.ts",
+                "default": "./dist/esm/resources/alertResponsibilities/alertResponsibilitiesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibilities/alertResponsibilitiesDto.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibilities/alertResponsibilitiesDto.js"
+            }
+        },
+        "./resources/alertResponsibilities/alertResponsibilitiesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibilities/alertResponsibilitiesUrls.d.ts",
+                "default": "./dist/esm/resources/alertResponsibilities/alertResponsibilitiesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibilities/alertResponsibilitiesUrls.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibilities/alertResponsibilitiesUrls.js"
+            }
+        },
+        "./resources/alertResponsibility/alertResponsibility": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibility/alertResponsibility.d.ts",
+                "default": "./dist/esm/resources/alertResponsibility/alertResponsibility.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibility/alertResponsibility.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibility/alertResponsibility.js"
+            }
+        },
+        "./resources/alertResponsibility/alertResponsibilityDto": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibility/alertResponsibilityDto.d.ts",
+                "default": "./dist/esm/resources/alertResponsibility/alertResponsibilityDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibility/alertResponsibilityDto.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibility/alertResponsibilityDto.js"
+            }
+        },
+        "./resources/alertResponsibility/alertResponsibilityUrls": {
+            "import": {
+                "types": "./dist/esm/resources/alertResponsibility/alertResponsibilityUrls.d.ts",
+                "default": "./dist/esm/resources/alertResponsibility/alertResponsibilityUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alertResponsibility/alertResponsibilityUrls.d.ts",
+                "default": "./dist/cjs/resources/alertResponsibility/alertResponsibilityUrls.js"
+            }
+        },
+        "./resources/alerts/alerts": {
+            "import": {
+                "types": "./dist/esm/resources/alerts/alerts.d.ts",
+                "default": "./dist/esm/resources/alerts/alerts.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alerts/alerts.d.ts",
+                "default": "./dist/cjs/resources/alerts/alerts.js"
+            }
+        },
+        "./resources/alerts/alertsDto": {
+            "import": {
+                "types": "./dist/esm/resources/alerts/alertsDto.d.ts",
+                "default": "./dist/esm/resources/alerts/alertsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alerts/alertsDto.d.ts",
+                "default": "./dist/cjs/resources/alerts/alertsDto.js"
+            }
+        },
+        "./resources/alerts/alertsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/alerts/alertsUrls.d.ts",
+                "default": "./dist/esm/resources/alerts/alertsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/alerts/alertsUrls.d.ts",
+                "default": "./dist/cjs/resources/alerts/alertsUrls.js"
+            }
+        },
+        "./resources/applications/applications": {
+            "import": {
+                "types": "./dist/esm/resources/applications/applications.d.ts",
+                "default": "./dist/esm/resources/applications/applications.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/applications/applications.d.ts",
+                "default": "./dist/cjs/resources/applications/applications.js"
+            }
+        },
+        "./resources/applications/applicationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/applications/applicationsDto.d.ts",
+                "default": "./dist/esm/resources/applications/applicationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/applications/applicationsDto.d.ts",
+                "default": "./dist/cjs/resources/applications/applicationsDto.js"
+            }
+        },
+        "./resources/applications/applicationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/applications/applicationsUrls.d.ts",
+                "default": "./dist/esm/resources/applications/applicationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/applications/applicationsUrls.d.ts",
+                "default": "./dist/cjs/resources/applications/applicationsUrls.js"
+            }
+        },
+        "./resources/approvalProfiles/approvalProfiles": {
+            "import": {
+                "types": "./dist/esm/resources/approvalProfiles/approvalProfiles.d.ts",
+                "default": "./dist/esm/resources/approvalProfiles/approvalProfiles.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalProfiles/approvalProfiles.d.ts",
+                "default": "./dist/cjs/resources/approvalProfiles/approvalProfiles.js"
+            }
+        },
+        "./resources/approvalProfiles/approvalProfilesDto": {
+            "import": {
+                "types": "./dist/esm/resources/approvalProfiles/approvalProfilesDto.d.ts",
+                "default": "./dist/esm/resources/approvalProfiles/approvalProfilesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalProfiles/approvalProfilesDto.d.ts",
+                "default": "./dist/cjs/resources/approvalProfiles/approvalProfilesDto.js"
+            }
+        },
+        "./resources/approvalProfiles/approvalProfilesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/approvalProfiles/approvalProfilesUrls.d.ts",
+                "default": "./dist/esm/resources/approvalProfiles/approvalProfilesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalProfiles/approvalProfilesUrls.d.ts",
+                "default": "./dist/cjs/resources/approvalProfiles/approvalProfilesUrls.js"
+            }
+        },
+        "./resources/approvalUserGroups/approvalUserGroups": {
+            "import": {
+                "types": "./dist/esm/resources/approvalUserGroups/approvalUserGroups.d.ts",
+                "default": "./dist/esm/resources/approvalUserGroups/approvalUserGroups.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalUserGroups/approvalUserGroups.d.ts",
+                "default": "./dist/cjs/resources/approvalUserGroups/approvalUserGroups.js"
+            }
+        },
+        "./resources/approvalUserGroups/approvalUserGroupsDto": {
+            "import": {
+                "types": "./dist/esm/resources/approvalUserGroups/approvalUserGroupsDto.d.ts",
+                "default": "./dist/esm/resources/approvalUserGroups/approvalUserGroupsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalUserGroups/approvalUserGroupsDto.d.ts",
+                "default": "./dist/cjs/resources/approvalUserGroups/approvalUserGroupsDto.js"
+            }
+        },
+        "./resources/approvalUserGroups/approvalUserGroupsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/approvalUserGroups/approvalUserGroupsUrls.d.ts",
+                "default": "./dist/esm/resources/approvalUserGroups/approvalUserGroupsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvalUserGroups/approvalUserGroupsUrls.d.ts",
+                "default": "./dist/cjs/resources/approvalUserGroups/approvalUserGroupsUrls.js"
+            }
+        },
+        "./resources/approvals/approvals": {
+            "import": {
+                "types": "./dist/esm/resources/approvals/approvals.d.ts",
+                "default": "./dist/esm/resources/approvals/approvals.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvals/approvals.d.ts",
+                "default": "./dist/cjs/resources/approvals/approvals.js"
+            }
+        },
+        "./resources/approvals/approvalsDto": {
+            "import": {
+                "types": "./dist/esm/resources/approvals/approvalsDto.d.ts",
+                "default": "./dist/esm/resources/approvals/approvalsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvals/approvalsDto.d.ts",
+                "default": "./dist/cjs/resources/approvals/approvalsDto.js"
+            }
+        },
+        "./resources/approvals/approvalsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/approvals/approvalsUrls.d.ts",
+                "default": "./dist/esm/resources/approvals/approvalsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/approvals/approvalsUrls.d.ts",
+                "default": "./dist/cjs/resources/approvals/approvalsUrls.js"
+            }
+        },
+        "./resources/attributeAttachments/attributeAttachments": {
+            "import": {
+                "types": "./dist/esm/resources/attributeAttachments/attributeAttachments.d.ts",
+                "default": "./dist/esm/resources/attributeAttachments/attributeAttachments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/attributeAttachments/attributeAttachments.d.ts",
+                "default": "./dist/cjs/resources/attributeAttachments/attributeAttachments.js"
+            }
+        },
+        "./resources/attributeAttachments/attributeAttachmentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/attributeAttachments/attributeAttachmentsDto.d.ts",
+                "default": "./dist/esm/resources/attributeAttachments/attributeAttachmentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/attributeAttachments/attributeAttachmentsDto.d.ts",
+                "default": "./dist/cjs/resources/attributeAttachments/attributeAttachmentsDto.js"
+            }
+        },
+        "./resources/attributeAttachments/attributeAttachmentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/attributeAttachments/attributeAttachmentsUrls.d.ts",
+                "default": "./dist/esm/resources/attributeAttachments/attributeAttachmentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/attributeAttachments/attributeAttachmentsUrls.d.ts",
+                "default": "./dist/cjs/resources/attributeAttachments/attributeAttachmentsUrls.js"
+            }
+        },
+        "./resources/billingPeriods/billingPeriods": {
+            "import": {
+                "types": "./dist/esm/resources/billingPeriods/billingPeriods.d.ts",
+                "default": "./dist/esm/resources/billingPeriods/billingPeriods.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/billingPeriods/billingPeriods.d.ts",
+                "default": "./dist/cjs/resources/billingPeriods/billingPeriods.js"
+            }
+        },
+        "./resources/billingPeriods/billingPeriodsDto": {
+            "import": {
+                "types": "./dist/esm/resources/billingPeriods/billingPeriodsDto.d.ts",
+                "default": "./dist/esm/resources/billingPeriods/billingPeriodsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/billingPeriods/billingPeriodsDto.d.ts",
+                "default": "./dist/cjs/resources/billingPeriods/billingPeriodsDto.js"
+            }
+        },
+        "./resources/billingPeriods/billingPeriodsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/billingPeriods/billingPeriodsUrls.d.ts",
+                "default": "./dist/esm/resources/billingPeriods/billingPeriodsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/billingPeriods/billingPeriodsUrls.d.ts",
+                "default": "./dist/cjs/resources/billingPeriods/billingPeriodsUrls.js"
+            }
+        },
+        "./resources/bookings/bookings": {
+            "import": {
+                "types": "./dist/esm/resources/bookings/bookings.d.ts",
+                "default": "./dist/esm/resources/bookings/bookings.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/bookings/bookings.d.ts",
+                "default": "./dist/cjs/resources/bookings/bookings.js"
+            }
+        },
+        "./resources/bookings/bookingsDto": {
+            "import": {
+                "types": "./dist/esm/resources/bookings/bookingsDto.d.ts",
+                "default": "./dist/esm/resources/bookings/bookingsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/bookings/bookingsDto.d.ts",
+                "default": "./dist/cjs/resources/bookings/bookingsDto.js"
+            }
+        },
+        "./resources/bookings/bookingsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/bookings/bookingsUrls.d.ts",
+                "default": "./dist/esm/resources/bookings/bookingsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/bookings/bookingsUrls.d.ts",
+                "default": "./dist/cjs/resources/bookings/bookingsUrls.js"
+            }
+        },
+        "./resources/chargingPeriods/chargingPeriods": {
+            "import": {
+                "types": "./dist/esm/resources/chargingPeriods/chargingPeriods.d.ts",
+                "default": "./dist/esm/resources/chargingPeriods/chargingPeriods.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/chargingPeriods/chargingPeriods.d.ts",
+                "default": "./dist/cjs/resources/chargingPeriods/chargingPeriods.js"
+            }
+        },
+        "./resources/chargingPeriods/chargingPeriodsDto": {
+            "import": {
+                "types": "./dist/esm/resources/chargingPeriods/chargingPeriodsDto.d.ts",
+                "default": "./dist/esm/resources/chargingPeriods/chargingPeriodsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/chargingPeriods/chargingPeriodsDto.d.ts",
+                "default": "./dist/cjs/resources/chargingPeriods/chargingPeriodsDto.js"
+            }
+        },
+        "./resources/chargingPeriods/chargingPeriodsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/chargingPeriods/chargingPeriodsUrls.d.ts",
+                "default": "./dist/esm/resources/chargingPeriods/chargingPeriodsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/chargingPeriods/chargingPeriodsUrls.d.ts",
+                "default": "./dist/cjs/resources/chargingPeriods/chargingPeriodsUrls.js"
+            }
+        },
+        "./resources/common/paginationDto": {
+            "import": {
+                "types": "./dist/esm/resources/common/paginationDto.d.ts",
+                "default": "./dist/esm/resources/common/paginationDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/common/paginationDto.d.ts",
+                "default": "./dist/cjs/resources/common/paginationDto.js"
+            }
+        },
+        "./resources/communicationProfiles/communicationProfiles": {
+            "import": {
+                "types": "./dist/esm/resources/communicationProfiles/communicationProfiles.d.ts",
+                "default": "./dist/esm/resources/communicationProfiles/communicationProfiles.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communicationProfiles/communicationProfiles.d.ts",
+                "default": "./dist/cjs/resources/communicationProfiles/communicationProfiles.js"
+            }
+        },
+        "./resources/communicationProfiles/communicationProfilesDto": {
+            "import": {
+                "types": "./dist/esm/resources/communicationProfiles/communicationProfilesDto.d.ts",
+                "default": "./dist/esm/resources/communicationProfiles/communicationProfilesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communicationProfiles/communicationProfilesDto.d.ts",
+                "default": "./dist/cjs/resources/communicationProfiles/communicationProfilesDto.js"
+            }
+        },
+        "./resources/communicationProfiles/communicationProfilesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/communicationProfiles/communicationProfilesUrls.d.ts",
+                "default": "./dist/esm/resources/communicationProfiles/communicationProfilesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communicationProfiles/communicationProfilesUrls.d.ts",
+                "default": "./dist/cjs/resources/communicationProfiles/communicationProfilesUrls.js"
+            }
+        },
+        "./resources/communications/communications": {
+            "import": {
+                "types": "./dist/esm/resources/communications/communications.d.ts",
+                "default": "./dist/esm/resources/communications/communications.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communications/communications.d.ts",
+                "default": "./dist/cjs/resources/communications/communications.js"
+            }
+        },
+        "./resources/communications/communicationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/communications/communicationsDto.d.ts",
+                "default": "./dist/esm/resources/communications/communicationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communications/communicationsDto.d.ts",
+                "default": "./dist/cjs/resources/communications/communicationsDto.js"
+            }
+        },
+        "./resources/communications/communicationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/communications/communicationsUrls.d.ts",
+                "default": "./dist/esm/resources/communications/communicationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/communications/communicationsUrls.d.ts",
+                "default": "./dist/cjs/resources/communications/communicationsUrls.js"
+            }
+        },
+        "./resources/countries/countries": {
+            "import": {
+                "types": "./dist/esm/resources/countries/countries.d.ts",
+                "default": "./dist/esm/resources/countries/countries.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/countries/countries.d.ts",
+                "default": "./dist/cjs/resources/countries/countries.js"
+            }
+        },
+        "./resources/countries/countriesDto": {
+            "import": {
+                "types": "./dist/esm/resources/countries/countriesDto.d.ts",
+                "default": "./dist/esm/resources/countries/countriesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/countries/countriesDto.d.ts",
+                "default": "./dist/cjs/resources/countries/countriesDto.js"
+            }
+        },
+        "./resources/countries/countriesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/countries/countriesUrls.d.ts",
+                "default": "./dist/esm/resources/countries/countriesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/countries/countriesUrls.d.ts",
+                "default": "./dist/cjs/resources/countries/countriesUrls.js"
+            }
+        },
+        "./resources/creditNoteApplications/creditNoteApplications": {
+            "import": {
+                "types": "./dist/esm/resources/creditNoteApplications/creditNoteApplications.d.ts",
+                "default": "./dist/esm/resources/creditNoteApplications/creditNoteApplications.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNoteApplications/creditNoteApplications.d.ts",
+                "default": "./dist/cjs/resources/creditNoteApplications/creditNoteApplications.js"
+            }
+        },
+        "./resources/creditNoteApplications/creditNoteApplicationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/creditNoteApplications/creditNoteApplicationsDto.d.ts",
+                "default": "./dist/esm/resources/creditNoteApplications/creditNoteApplicationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNoteApplications/creditNoteApplicationsDto.d.ts",
+                "default": "./dist/cjs/resources/creditNoteApplications/creditNoteApplicationsDto.js"
+            }
+        },
+        "./resources/creditNoteApplications/creditNoteApplicationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/creditNoteApplications/creditNoteApplicationsUrls.d.ts",
+                "default": "./dist/esm/resources/creditNoteApplications/creditNoteApplicationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNoteApplications/creditNoteApplicationsUrls.d.ts",
+                "default": "./dist/cjs/resources/creditNoteApplications/creditNoteApplicationsUrls.js"
+            }
+        },
+        "./resources/creditNotes/creditNotes": {
+            "import": {
+                "types": "./dist/esm/resources/creditNotes/creditNotes.d.ts",
+                "default": "./dist/esm/resources/creditNotes/creditNotes.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNotes/creditNotes.d.ts",
+                "default": "./dist/cjs/resources/creditNotes/creditNotes.js"
+            }
+        },
+        "./resources/creditNotes/creditNotesDto": {
+            "import": {
+                "types": "./dist/esm/resources/creditNotes/creditNotesDto.d.ts",
+                "default": "./dist/esm/resources/creditNotes/creditNotesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNotes/creditNotesDto.d.ts",
+                "default": "./dist/cjs/resources/creditNotes/creditNotesDto.js"
+            }
+        },
+        "./resources/creditNotes/creditNotesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/creditNotes/creditNotesUrls.d.ts",
+                "default": "./dist/esm/resources/creditNotes/creditNotesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/creditNotes/creditNotesUrls.d.ts",
+                "default": "./dist/cjs/resources/creditNotes/creditNotesUrls.js"
+            }
+        },
+        "./resources/customAttributes/customAttributes": {
+            "import": {
+                "types": "./dist/esm/resources/customAttributes/customAttributes.d.ts",
+                "default": "./dist/esm/resources/customAttributes/customAttributes.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customAttributes/customAttributes.d.ts",
+                "default": "./dist/cjs/resources/customAttributes/customAttributes.js"
+            }
+        },
+        "./resources/customAttributes/customAttributesDto": {
+            "import": {
+                "types": "./dist/esm/resources/customAttributes/customAttributesDto.d.ts",
+                "default": "./dist/esm/resources/customAttributes/customAttributesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customAttributes/customAttributesDto.d.ts",
+                "default": "./dist/cjs/resources/customAttributes/customAttributesDto.js"
+            }
+        },
+        "./resources/customAttributes/customAttributesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customAttributes/customAttributesUrls.d.ts",
+                "default": "./dist/esm/resources/customAttributes/customAttributesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customAttributes/customAttributesUrls.d.ts",
+                "default": "./dist/cjs/resources/customAttributes/customAttributesUrls.js"
+            }
+        },
+        "./resources/customComponents/customComponents": {
+            "import": {
+                "types": "./dist/esm/resources/customComponents/customComponents.d.ts",
+                "default": "./dist/esm/resources/customComponents/customComponents.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customComponents/customComponents.d.ts",
+                "default": "./dist/cjs/resources/customComponents/customComponents.js"
+            }
+        },
+        "./resources/customComponents/customComponentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/customComponents/customComponentsDto.d.ts",
+                "default": "./dist/esm/resources/customComponents/customComponentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customComponents/customComponentsDto.d.ts",
+                "default": "./dist/cjs/resources/customComponents/customComponentsDto.js"
+            }
+        },
+        "./resources/customComponents/customComponentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customComponents/customComponentsUrls.d.ts",
+                "default": "./dist/esm/resources/customComponents/customComponentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customComponents/customComponentsUrls.d.ts",
+                "default": "./dist/cjs/resources/customComponents/customComponentsUrls.js"
+            }
+        },
+        "./resources/customEvents/customEvents": {
+            "import": {
+                "types": "./dist/esm/resources/customEvents/customEvents.d.ts",
+                "default": "./dist/esm/resources/customEvents/customEvents.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customEvents/customEvents.d.ts",
+                "default": "./dist/cjs/resources/customEvents/customEvents.js"
+            }
+        },
+        "./resources/customEvents/customEventsDto": {
+            "import": {
+                "types": "./dist/esm/resources/customEvents/customEventsDto.d.ts",
+                "default": "./dist/esm/resources/customEvents/customEventsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customEvents/customEventsDto.d.ts",
+                "default": "./dist/cjs/resources/customEvents/customEventsDto.js"
+            }
+        },
+        "./resources/customEvents/customEventsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customEvents/customEventsUrls.d.ts",
+                "default": "./dist/esm/resources/customEvents/customEventsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customEvents/customEventsUrls.d.ts",
+                "default": "./dist/cjs/resources/customEvents/customEventsUrls.js"
+            }
+        },
+        "./resources/customFeatures/customFeatures": {
+            "import": {
+                "types": "./dist/esm/resources/customFeatures/customFeatures.d.ts",
+                "default": "./dist/esm/resources/customFeatures/customFeatures.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFeatures/customFeatures.d.ts",
+                "default": "./dist/cjs/resources/customFeatures/customFeatures.js"
+            }
+        },
+        "./resources/customFeatures/customFeaturesDto": {
+            "import": {
+                "types": "./dist/esm/resources/customFeatures/customFeaturesDto.d.ts",
+                "default": "./dist/esm/resources/customFeatures/customFeaturesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFeatures/customFeaturesDto.d.ts",
+                "default": "./dist/cjs/resources/customFeatures/customFeaturesDto.js"
+            }
+        },
+        "./resources/customFeatures/customFeaturesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customFeatures/customFeaturesUrls.d.ts",
+                "default": "./dist/esm/resources/customFeatures/customFeaturesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFeatures/customFeaturesUrls.d.ts",
+                "default": "./dist/cjs/resources/customFeatures/customFeaturesUrls.js"
+            }
+        },
+        "./resources/customFields/customFields": {
+            "import": {
+                "types": "./dist/esm/resources/customFields/customFields.d.ts",
+                "default": "./dist/esm/resources/customFields/customFields.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFields/customFields.d.ts",
+                "default": "./dist/cjs/resources/customFields/customFields.js"
+            }
+        },
+        "./resources/customFields/customFieldsDto": {
+            "import": {
+                "types": "./dist/esm/resources/customFields/customFieldsDto.d.ts",
+                "default": "./dist/esm/resources/customFields/customFieldsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFields/customFieldsDto.d.ts",
+                "default": "./dist/cjs/resources/customFields/customFieldsDto.js"
+            }
+        },
+        "./resources/customFields/customFieldsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customFields/customFieldsUrls.d.ts",
+                "default": "./dist/esm/resources/customFields/customFieldsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customFields/customFieldsUrls.d.ts",
+                "default": "./dist/cjs/resources/customFields/customFieldsUrls.js"
+            }
+        },
+        "./resources/customForms/customForms": {
+            "import": {
+                "types": "./dist/esm/resources/customForms/customForms.d.ts",
+                "default": "./dist/esm/resources/customForms/customForms.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customForms/customForms.d.ts",
+                "default": "./dist/cjs/resources/customForms/customForms.js"
+            }
+        },
+        "./resources/customForms/customFormsDto": {
+            "import": {
+                "types": "./dist/esm/resources/customForms/customFormsDto.d.ts",
+                "default": "./dist/esm/resources/customForms/customFormsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customForms/customFormsDto.d.ts",
+                "default": "./dist/cjs/resources/customForms/customFormsDto.js"
+            }
+        },
+        "./resources/customForms/customFormsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/customForms/customFormsUrls.d.ts",
+                "default": "./dist/esm/resources/customForms/customFormsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/customForms/customFormsUrls.d.ts",
+                "default": "./dist/cjs/resources/customForms/customFormsUrls.js"
+            }
+        },
+        "./resources/dayOfMonth/dayOfMonth": {
+            "import": {
+                "types": "./dist/esm/resources/dayOfMonth/dayOfMonth.d.ts",
+                "default": "./dist/esm/resources/dayOfMonth/dayOfMonth.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/dayOfMonth/dayOfMonth.d.ts",
+                "default": "./dist/cjs/resources/dayOfMonth/dayOfMonth.js"
+            }
+        },
+        "./resources/dayOfMonth/dayOfMonthDto": {
+            "import": {
+                "types": "./dist/esm/resources/dayOfMonth/dayOfMonthDto.d.ts",
+                "default": "./dist/esm/resources/dayOfMonth/dayOfMonthDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/dayOfMonth/dayOfMonthDto.d.ts",
+                "default": "./dist/cjs/resources/dayOfMonth/dayOfMonthDto.js"
+            }
+        },
+        "./resources/dayOfMonth/dayOfMonthUrls": {
+            "import": {
+                "types": "./dist/esm/resources/dayOfMonth/dayOfMonthUrls.d.ts",
+                "default": "./dist/esm/resources/dayOfMonth/dayOfMonthUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/dayOfMonth/dayOfMonthUrls.d.ts",
+                "default": "./dist/cjs/resources/dayOfMonth/dayOfMonthUrls.js"
+            }
+        },
+        "./resources/departments/departments": {
+            "import": {
+                "types": "./dist/esm/resources/departments/departments.d.ts",
+                "default": "./dist/esm/resources/departments/departments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/departments/departments.d.ts",
+                "default": "./dist/cjs/resources/departments/departments.js"
+            }
+        },
+        "./resources/departments/departmentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/departments/departmentsDto.d.ts",
+                "default": "./dist/esm/resources/departments/departmentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/departments/departmentsDto.d.ts",
+                "default": "./dist/cjs/resources/departments/departmentsDto.js"
+            }
+        },
+        "./resources/departments/departmentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/departments/departmentsUrls.d.ts",
+                "default": "./dist/esm/resources/departments/departmentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/departments/departmentsUrls.d.ts",
+                "default": "./dist/cjs/resources/departments/departmentsUrls.js"
+            }
+        },
+        "./resources/designations/designations": {
+            "import": {
+                "types": "./dist/esm/resources/designations/designations.d.ts",
+                "default": "./dist/esm/resources/designations/designations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/designations/designations.d.ts",
+                "default": "./dist/cjs/resources/designations/designations.js"
+            }
+        },
+        "./resources/designations/designationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/designations/designationsDto.d.ts",
+                "default": "./dist/esm/resources/designations/designationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/designations/designationsDto.d.ts",
+                "default": "./dist/cjs/resources/designations/designationsDto.js"
+            }
+        },
+        "./resources/designations/designationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/designations/designationsUrls.d.ts",
+                "default": "./dist/esm/resources/designations/designationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/designations/designationsUrls.d.ts",
+                "default": "./dist/cjs/resources/designations/designationsUrls.js"
+            }
+        },
+        "./resources/documentTemplates/documentTemplates": {
+            "import": {
+                "types": "./dist/esm/resources/documentTemplates/documentTemplates.d.ts",
+                "default": "./dist/esm/resources/documentTemplates/documentTemplates.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/documentTemplates/documentTemplates.d.ts",
+                "default": "./dist/cjs/resources/documentTemplates/documentTemplates.js"
+            }
+        },
+        "./resources/documentTemplates/documentTemplatesDto": {
+            "import": {
+                "types": "./dist/esm/resources/documentTemplates/documentTemplatesDto.d.ts",
+                "default": "./dist/esm/resources/documentTemplates/documentTemplatesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/documentTemplates/documentTemplatesDto.d.ts",
+                "default": "./dist/cjs/resources/documentTemplates/documentTemplatesDto.js"
+            }
+        },
+        "./resources/documentTemplates/documentTemplatesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/documentTemplates/documentTemplatesUrls.d.ts",
+                "default": "./dist/esm/resources/documentTemplates/documentTemplatesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/documentTemplates/documentTemplatesUrls.d.ts",
+                "default": "./dist/cjs/resources/documentTemplates/documentTemplatesUrls.js"
+            }
+        },
+        "./resources/emailTemplates/emailTemplates": {
+            "import": {
+                "types": "./dist/esm/resources/emailTemplates/emailTemplates.d.ts",
+                "default": "./dist/esm/resources/emailTemplates/emailTemplates.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/emailTemplates/emailTemplates.d.ts",
+                "default": "./dist/cjs/resources/emailTemplates/emailTemplates.js"
+            }
+        },
+        "./resources/emailTemplates/emailTemplatesDto": {
+            "import": {
+                "types": "./dist/esm/resources/emailTemplates/emailTemplatesDto.d.ts",
+                "default": "./dist/esm/resources/emailTemplates/emailTemplatesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/emailTemplates/emailTemplatesDto.d.ts",
+                "default": "./dist/cjs/resources/emailTemplates/emailTemplatesDto.js"
+            }
+        },
+        "./resources/emailTemplates/emailTemplatesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/emailTemplates/emailTemplatesUrls.d.ts",
+                "default": "./dist/esm/resources/emailTemplates/emailTemplatesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/emailTemplates/emailTemplatesUrls.d.ts",
+                "default": "./dist/cjs/resources/emailTemplates/emailTemplatesUrls.js"
+            }
+        },
+        "./resources/employees/employees": {
+            "import": {
+                "types": "./dist/esm/resources/employees/employees.d.ts",
+                "default": "./dist/esm/resources/employees/employees.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/employees/employees.d.ts",
+                "default": "./dist/cjs/resources/employees/employees.js"
+            }
+        },
+        "./resources/employees/employeesDto": {
+            "import": {
+                "types": "./dist/esm/resources/employees/employeesDto.d.ts",
+                "default": "./dist/esm/resources/employees/employeesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/employees/employeesDto.d.ts",
+                "default": "./dist/cjs/resources/employees/employeesDto.js"
+            }
+        },
+        "./resources/employees/employeesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/employees/employeesUrls.d.ts",
+                "default": "./dist/esm/resources/employees/employeesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/employees/employeesUrls.d.ts",
+                "default": "./dist/cjs/resources/employees/employeesUrls.js"
+            }
+        },
+        "./resources/events/events": {
+            "import": {
+                "types": "./dist/esm/resources/events/events.d.ts",
+                "default": "./dist/esm/resources/events/events.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/events/events.d.ts",
+                "default": "./dist/cjs/resources/events/events.js"
+            }
+        },
+        "./resources/events/eventsDto": {
+            "import": {
+                "types": "./dist/esm/resources/events/eventsDto.d.ts",
+                "default": "./dist/esm/resources/events/eventsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/events/eventsDto.d.ts",
+                "default": "./dist/cjs/resources/events/eventsDto.js"
+            }
+        },
+        "./resources/events/eventsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/events/eventsUrls.d.ts",
+                "default": "./dist/esm/resources/events/eventsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/events/eventsUrls.d.ts",
+                "default": "./dist/cjs/resources/events/eventsUrls.js"
+            }
+        },
+        "./resources/express/express": {
+            "import": {
+                "types": "./dist/esm/resources/express/express.d.ts",
+                "default": "./dist/esm/resources/express/express.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/express/express.d.ts",
+                "default": "./dist/cjs/resources/express/express.js"
+            }
+        },
+        "./resources/express/expressDto": {
+            "import": {
+                "types": "./dist/esm/resources/express/expressDto.d.ts",
+                "default": "./dist/esm/resources/express/expressDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/express/expressDto.d.ts",
+                "default": "./dist/cjs/resources/express/expressDto.js"
+            }
+        },
+        "./resources/express/expressUrls": {
+            "import": {
+                "types": "./dist/esm/resources/express/expressUrls.d.ts",
+                "default": "./dist/esm/resources/express/expressUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/express/expressUrls.d.ts",
+                "default": "./dist/cjs/resources/express/expressUrls.js"
+            }
+        },
+        "./resources/externalDatabases/externalDatabases": {
+            "import": {
+                "types": "./dist/esm/resources/externalDatabases/externalDatabases.d.ts",
+                "default": "./dist/esm/resources/externalDatabases/externalDatabases.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/externalDatabases/externalDatabases.d.ts",
+                "default": "./dist/cjs/resources/externalDatabases/externalDatabases.js"
+            }
+        },
+        "./resources/externalDatabases/externalDatabasesDto": {
+            "import": {
+                "types": "./dist/esm/resources/externalDatabases/externalDatabasesDto.d.ts",
+                "default": "./dist/esm/resources/externalDatabases/externalDatabasesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/externalDatabases/externalDatabasesDto.d.ts",
+                "default": "./dist/cjs/resources/externalDatabases/externalDatabasesDto.js"
+            }
+        },
+        "./resources/externalDatabases/externalDatabasesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/externalDatabases/externalDatabasesUrls.d.ts",
+                "default": "./dist/esm/resources/externalDatabases/externalDatabasesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/externalDatabases/externalDatabasesUrls.d.ts",
+                "default": "./dist/cjs/resources/externalDatabases/externalDatabasesUrls.js"
+            }
+        },
+        "./resources/fulfillmentProfiles/fulfillmentProfiles": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfiles.d.ts",
+                "default": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfiles.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfiles.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfiles.js"
+            }
+        },
+        "./resources/fulfillmentProfiles/fulfillmentProfilesDto": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfilesDto.d.ts",
+                "default": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfilesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfilesDto.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfilesDto.js"
+            }
+        },
+        "./resources/fulfillmentProfiles/fulfillmentProfilesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfilesUrls.d.ts",
+                "default": "./dist/esm/resources/fulfillmentProfiles/fulfillmentProfilesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfilesUrls.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentProfiles/fulfillmentProfilesUrls.js"
+            }
+        },
+        "./resources/fulfillmentTerms/fulfillmentTerms": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentTerms/fulfillmentTerms.d.ts",
+                "default": "./dist/esm/resources/fulfillmentTerms/fulfillmentTerms.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTerms.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTerms.js"
+            }
+        },
+        "./resources/fulfillmentTerms/fulfillmentTermsDto": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentTerms/fulfillmentTermsDto.d.ts",
+                "default": "./dist/esm/resources/fulfillmentTerms/fulfillmentTermsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTermsDto.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTermsDto.js"
+            }
+        },
+        "./resources/fulfillmentTerms/fulfillmentTermsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/fulfillmentTerms/fulfillmentTermsUrls.d.ts",
+                "default": "./dist/esm/resources/fulfillmentTerms/fulfillmentTermsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTermsUrls.d.ts",
+                "default": "./dist/cjs/resources/fulfillmentTerms/fulfillmentTermsUrls.js"
+            }
+        },
+        "./resources/giftCertificates/giftCertificates": {
+            "import": {
+                "types": "./dist/esm/resources/giftCertificates/giftCertificates.d.ts",
+                "default": "./dist/esm/resources/giftCertificates/giftCertificates.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/giftCertificates/giftCertificates.d.ts",
+                "default": "./dist/cjs/resources/giftCertificates/giftCertificates.js"
+            }
+        },
+        "./resources/giftCertificates/giftCertificatesDto": {
+            "import": {
+                "types": "./dist/esm/resources/giftCertificates/giftCertificatesDto.d.ts",
+                "default": "./dist/esm/resources/giftCertificates/giftCertificatesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/giftCertificates/giftCertificatesDto.d.ts",
+                "default": "./dist/cjs/resources/giftCertificates/giftCertificatesDto.js"
+            }
+        },
+        "./resources/giftCertificates/giftCertificatesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/giftCertificates/giftCertificatesUrls.d.ts",
+                "default": "./dist/esm/resources/giftCertificates/giftCertificatesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/giftCertificates/giftCertificatesUrls.d.ts",
+                "default": "./dist/cjs/resources/giftCertificates/giftCertificatesUrls.js"
+            }
+        },
+        "./resources/integrationConnections/integrationConnections": {
+            "import": {
+                "types": "./dist/esm/resources/integrationConnections/integrationConnections.d.ts",
+                "default": "./dist/esm/resources/integrationConnections/integrationConnections.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/integrationConnections/integrationConnections.d.ts",
+                "default": "./dist/cjs/resources/integrationConnections/integrationConnections.js"
+            }
+        },
+        "./resources/integrationConnections/integrationConnectionsDto": {
+            "import": {
+                "types": "./dist/esm/resources/integrationConnections/integrationConnectionsDto.d.ts",
+                "default": "./dist/esm/resources/integrationConnections/integrationConnectionsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/integrationConnections/integrationConnectionsDto.d.ts",
+                "default": "./dist/cjs/resources/integrationConnections/integrationConnectionsDto.js"
+            }
+        },
+        "./resources/integrationConnections/integrationConnectionsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/integrationConnections/integrationConnectionsUrls.d.ts",
+                "default": "./dist/esm/resources/integrationConnections/integrationConnectionsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/integrationConnections/integrationConnectionsUrls.d.ts",
+                "default": "./dist/cjs/resources/integrationConnections/integrationConnectionsUrls.js"
+            }
+        },
+        "./resources/inventoryAdjustments/inventoryAdjustments": {
+            "import": {
+                "types": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustments.d.ts",
+                "default": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustments.d.ts",
+                "default": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustments.js"
+            }
+        },
+        "./resources/inventoryAdjustments/inventoryAdjustmentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustmentsDto.d.ts",
+                "default": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustmentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustmentsDto.d.ts",
+                "default": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustmentsDto.js"
+            }
+        },
+        "./resources/inventoryAdjustments/inventoryAdjustmentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustmentsUrls.d.ts",
+                "default": "./dist/esm/resources/inventoryAdjustments/inventoryAdjustmentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustmentsUrls.d.ts",
+                "default": "./dist/cjs/resources/inventoryAdjustments/inventoryAdjustmentsUrls.js"
+            }
+        },
+        "./resources/invoiceTerms/invoiceTerms": {
+            "import": {
+                "types": "./dist/esm/resources/invoiceTerms/invoiceTerms.d.ts",
+                "default": "./dist/esm/resources/invoiceTerms/invoiceTerms.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoiceTerms/invoiceTerms.d.ts",
+                "default": "./dist/cjs/resources/invoiceTerms/invoiceTerms.js"
+            }
+        },
+        "./resources/invoiceTerms/invoiceTermsDto": {
+            "import": {
+                "types": "./dist/esm/resources/invoiceTerms/invoiceTermsDto.d.ts",
+                "default": "./dist/esm/resources/invoiceTerms/invoiceTermsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoiceTerms/invoiceTermsDto.d.ts",
+                "default": "./dist/cjs/resources/invoiceTerms/invoiceTermsDto.js"
+            }
+        },
+        "./resources/invoiceTerms/invoiceTermsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/invoiceTerms/invoiceTermsUrls.d.ts",
+                "default": "./dist/esm/resources/invoiceTerms/invoiceTermsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoiceTerms/invoiceTermsUrls.d.ts",
+                "default": "./dist/cjs/resources/invoiceTerms/invoiceTermsUrls.js"
+            }
+        },
+        "./resources/invoices/invoices": {
+            "import": {
+                "types": "./dist/esm/resources/invoices/invoices.d.ts",
+                "default": "./dist/esm/resources/invoices/invoices.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoices/invoices.d.ts",
+                "default": "./dist/cjs/resources/invoices/invoices.js"
+            }
+        },
+        "./resources/invoices/invoicesDto": {
+            "import": {
+                "types": "./dist/esm/resources/invoices/invoicesDto.d.ts",
+                "default": "./dist/esm/resources/invoices/invoicesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoices/invoicesDto.d.ts",
+                "default": "./dist/cjs/resources/invoices/invoicesDto.js"
+            }
+        },
+        "./resources/invoices/invoicesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/invoices/invoicesUrls.d.ts",
+                "default": "./dist/esm/resources/invoices/invoicesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/invoices/invoicesUrls.d.ts",
+                "default": "./dist/cjs/resources/invoices/invoicesUrls.js"
+            }
+        },
+        "./resources/itemFulfillments/itemFulfillments": {
+            "import": {
+                "types": "./dist/esm/resources/itemFulfillments/itemFulfillments.d.ts",
+                "default": "./dist/esm/resources/itemFulfillments/itemFulfillments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemFulfillments/itemFulfillments.d.ts",
+                "default": "./dist/cjs/resources/itemFulfillments/itemFulfillments.js"
+            }
+        },
+        "./resources/itemFulfillments/itemFulfillmentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/itemFulfillments/itemFulfillmentsDto.d.ts",
+                "default": "./dist/esm/resources/itemFulfillments/itemFulfillmentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemFulfillments/itemFulfillmentsDto.d.ts",
+                "default": "./dist/cjs/resources/itemFulfillments/itemFulfillmentsDto.js"
+            }
+        },
+        "./resources/itemFulfillments/itemFulfillmentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/itemFulfillments/itemFulfillmentsUrls.d.ts",
+                "default": "./dist/esm/resources/itemFulfillments/itemFulfillmentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemFulfillments/itemFulfillmentsUrls.d.ts",
+                "default": "./dist/cjs/resources/itemFulfillments/itemFulfillmentsUrls.js"
+            }
+        },
+        "./resources/itemReceipts/itemReceipts": {
+            "import": {
+                "types": "./dist/esm/resources/itemReceipts/itemReceipts.d.ts",
+                "default": "./dist/esm/resources/itemReceipts/itemReceipts.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemReceipts/itemReceipts.d.ts",
+                "default": "./dist/cjs/resources/itemReceipts/itemReceipts.js"
+            }
+        },
+        "./resources/itemReceipts/itemReceiptsDto": {
+            "import": {
+                "types": "./dist/esm/resources/itemReceipts/itemReceiptsDto.d.ts",
+                "default": "./dist/esm/resources/itemReceipts/itemReceiptsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemReceipts/itemReceiptsDto.d.ts",
+                "default": "./dist/cjs/resources/itemReceipts/itemReceiptsDto.js"
+            }
+        },
+        "./resources/itemReceipts/itemReceiptsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/itemReceipts/itemReceiptsUrls.d.ts",
+                "default": "./dist/esm/resources/itemReceipts/itemReceiptsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/itemReceipts/itemReceiptsUrls.d.ts",
+                "default": "./dist/cjs/resources/itemReceipts/itemReceiptsUrls.js"
+            }
+        },
+        "./resources/items/items": {
+            "import": {
+                "types": "./dist/esm/resources/items/items.d.ts",
+                "default": "./dist/esm/resources/items/items.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/items/items.d.ts",
+                "default": "./dist/cjs/resources/items/items.js"
+            }
+        },
+        "./resources/items/itemsDto": {
+            "import": {
+                "types": "./dist/esm/resources/items/itemsDto.d.ts",
+                "default": "./dist/esm/resources/items/itemsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/items/itemsDto.d.ts",
+                "default": "./dist/cjs/resources/items/itemsDto.js"
+            }
+        },
+        "./resources/items/itemsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/items/itemsUrls.d.ts",
+                "default": "./dist/esm/resources/items/itemsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/items/itemsUrls.d.ts",
+                "default": "./dist/cjs/resources/items/itemsUrls.js"
+            }
+        },
+        "./resources/labours/labours": {
+            "import": {
+                "types": "./dist/esm/resources/labours/labours.d.ts",
+                "default": "./dist/esm/resources/labours/labours.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/labours/labours.d.ts",
+                "default": "./dist/cjs/resources/labours/labours.js"
+            }
+        },
+        "./resources/labours/laboursDto": {
+            "import": {
+                "types": "./dist/esm/resources/labours/laboursDto.d.ts",
+                "default": "./dist/esm/resources/labours/laboursDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/labours/laboursDto.d.ts",
+                "default": "./dist/cjs/resources/labours/laboursDto.js"
+            }
+        },
+        "./resources/labours/laboursUrls": {
+            "import": {
+                "types": "./dist/esm/resources/labours/laboursUrls.d.ts",
+                "default": "./dist/esm/resources/labours/laboursUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/labours/laboursUrls.d.ts",
+                "default": "./dist/cjs/resources/labours/laboursUrls.js"
+            }
+        },
+        "./resources/milestones/milestones": {
+            "import": {
+                "types": "./dist/esm/resources/milestones/milestones.d.ts",
+                "default": "./dist/esm/resources/milestones/milestones.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/milestones/milestones.d.ts",
+                "default": "./dist/cjs/resources/milestones/milestones.js"
+            }
+        },
+        "./resources/milestones/milestonesDto": {
+            "import": {
+                "types": "./dist/esm/resources/milestones/milestonesDto.d.ts",
+                "default": "./dist/esm/resources/milestones/milestonesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/milestones/milestonesDto.d.ts",
+                "default": "./dist/cjs/resources/milestones/milestonesDto.js"
+            }
+        },
+        "./resources/milestones/milestonesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/milestones/milestonesUrls.d.ts",
+                "default": "./dist/esm/resources/milestones/milestonesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/milestones/milestonesUrls.d.ts",
+                "default": "./dist/cjs/resources/milestones/milestonesUrls.js"
+            }
+        },
+        "./resources/noteAttachments/noteAttachments": {
+            "import": {
+                "types": "./dist/esm/resources/noteAttachments/noteAttachments.d.ts",
+                "default": "./dist/esm/resources/noteAttachments/noteAttachments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteAttachments/noteAttachments.d.ts",
+                "default": "./dist/cjs/resources/noteAttachments/noteAttachments.js"
+            }
+        },
+        "./resources/noteAttachments/noteAttachmentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/noteAttachments/noteAttachmentsDto.d.ts",
+                "default": "./dist/esm/resources/noteAttachments/noteAttachmentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteAttachments/noteAttachmentsDto.d.ts",
+                "default": "./dist/cjs/resources/noteAttachments/noteAttachmentsDto.js"
+            }
+        },
+        "./resources/noteAttachments/noteAttachmentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/noteAttachments/noteAttachmentsUrls.d.ts",
+                "default": "./dist/esm/resources/noteAttachments/noteAttachmentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteAttachments/noteAttachmentsUrls.d.ts",
+                "default": "./dist/cjs/resources/noteAttachments/noteAttachmentsUrls.js"
+            }
+        },
+        "./resources/noteGroups/noteGroups": {
+            "import": {
+                "types": "./dist/esm/resources/noteGroups/noteGroups.d.ts",
+                "default": "./dist/esm/resources/noteGroups/noteGroups.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteGroups/noteGroups.d.ts",
+                "default": "./dist/cjs/resources/noteGroups/noteGroups.js"
+            }
+        },
+        "./resources/noteGroups/noteGroupsDto": {
+            "import": {
+                "types": "./dist/esm/resources/noteGroups/noteGroupsDto.d.ts",
+                "default": "./dist/esm/resources/noteGroups/noteGroupsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteGroups/noteGroupsDto.d.ts",
+                "default": "./dist/cjs/resources/noteGroups/noteGroupsDto.js"
+            }
+        },
+        "./resources/noteGroups/noteGroupsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/noteGroups/noteGroupsUrls.d.ts",
+                "default": "./dist/esm/resources/noteGroups/noteGroupsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/noteGroups/noteGroupsUrls.d.ts",
+                "default": "./dist/cjs/resources/noteGroups/noteGroupsUrls.js"
+            }
+        },
+        "./resources/orders/orders": {
+            "import": {
+                "types": "./dist/esm/resources/orders/orders.d.ts",
+                "default": "./dist/esm/resources/orders/orders.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/orders/orders.d.ts",
+                "default": "./dist/cjs/resources/orders/orders.js"
+            }
+        },
+        "./resources/orders/ordersDto": {
+            "import": {
+                "types": "./dist/esm/resources/orders/ordersDto.d.ts",
+                "default": "./dist/esm/resources/orders/ordersDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/orders/ordersDto.d.ts",
+                "default": "./dist/cjs/resources/orders/ordersDto.js"
+            }
+        },
+        "./resources/orders/ordersUrls": {
+            "import": {
+                "types": "./dist/esm/resources/orders/ordersUrls.d.ts",
+                "default": "./dist/esm/resources/orders/ordersUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/orders/ordersUrls.d.ts",
+                "default": "./dist/cjs/resources/orders/ordersUrls.js"
+            }
+        },
+        "./resources/organisation/organisation": {
+            "import": {
+                "types": "./dist/esm/resources/organisation/organisation.d.ts",
+                "default": "./dist/esm/resources/organisation/organisation.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisation/organisation.d.ts",
+                "default": "./dist/cjs/resources/organisation/organisation.js"
+            }
+        },
+        "./resources/organisation/organisationDto": {
+            "import": {
+                "types": "./dist/esm/resources/organisation/organisationDto.d.ts",
+                "default": "./dist/esm/resources/organisation/organisationDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisation/organisationDto.d.ts",
+                "default": "./dist/cjs/resources/organisation/organisationDto.js"
+            }
+        },
+        "./resources/organisation/organisationUrls": {
+            "import": {
+                "types": "./dist/esm/resources/organisation/organisationUrls.d.ts",
+                "default": "./dist/esm/resources/organisation/organisationUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisation/organisationUrls.d.ts",
+                "default": "./dist/cjs/resources/organisation/organisationUrls.js"
+            }
+        },
+        "./resources/organisations/organisations": {
+            "import": {
+                "types": "./dist/esm/resources/organisations/organisations.d.ts",
+                "default": "./dist/esm/resources/organisations/organisations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisations/organisations.d.ts",
+                "default": "./dist/cjs/resources/organisations/organisations.js"
+            }
+        },
+        "./resources/organisations/organisationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/organisations/organisationsDto.d.ts",
+                "default": "./dist/esm/resources/organisations/organisationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisations/organisationsDto.d.ts",
+                "default": "./dist/cjs/resources/organisations/organisationsDto.js"
+            }
+        },
+        "./resources/organisations/organisationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/organisations/organisationsUrls.d.ts",
+                "default": "./dist/esm/resources/organisations/organisationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/organisations/organisationsUrls.d.ts",
+                "default": "./dist/cjs/resources/organisations/organisationsUrls.js"
+            }
+        },
+        "./resources/payments/payments": {
+            "import": {
+                "types": "./dist/esm/resources/payments/payments.d.ts",
+                "default": "./dist/esm/resources/payments/payments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/payments/payments.d.ts",
+                "default": "./dist/cjs/resources/payments/payments.js"
+            }
+        },
+        "./resources/payments/paymentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/payments/paymentsDto.d.ts",
+                "default": "./dist/esm/resources/payments/paymentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/payments/paymentsDto.d.ts",
+                "default": "./dist/cjs/resources/payments/paymentsDto.js"
+            }
+        },
+        "./resources/payments/paymentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/payments/paymentsUrls.d.ts",
+                "default": "./dist/esm/resources/payments/paymentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/payments/paymentsUrls.d.ts",
+                "default": "./dist/cjs/resources/payments/paymentsUrls.js"
+            }
+        },
+        "./resources/portals/portals": {
+            "import": {
+                "types": "./dist/esm/resources/portals/portals.d.ts",
+                "default": "./dist/esm/resources/portals/portals.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/portals/portals.d.ts",
+                "default": "./dist/cjs/resources/portals/portals.js"
+            }
+        },
+        "./resources/portals/portalsDto": {
+            "import": {
+                "types": "./dist/esm/resources/portals/portalsDto.d.ts",
+                "default": "./dist/esm/resources/portals/portalsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/portals/portalsDto.d.ts",
+                "default": "./dist/cjs/resources/portals/portalsDto.js"
+            }
+        },
+        "./resources/portals/portalsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/portals/portalsUrls.d.ts",
+                "default": "./dist/esm/resources/portals/portalsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/portals/portalsUrls.d.ts",
+                "default": "./dist/cjs/resources/portals/portalsUrls.js"
+            }
+        },
+        "./resources/pricingPeriods/pricingPeriods": {
+            "import": {
+                "types": "./dist/esm/resources/pricingPeriods/pricingPeriods.d.ts",
+                "default": "./dist/esm/resources/pricingPeriods/pricingPeriods.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/pricingPeriods/pricingPeriods.d.ts",
+                "default": "./dist/cjs/resources/pricingPeriods/pricingPeriods.js"
+            }
+        },
+        "./resources/pricingPeriods/pricingPeriodsDto": {
+            "import": {
+                "types": "./dist/esm/resources/pricingPeriods/pricingPeriodsDto.d.ts",
+                "default": "./dist/esm/resources/pricingPeriods/pricingPeriodsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/pricingPeriods/pricingPeriodsDto.d.ts",
+                "default": "./dist/cjs/resources/pricingPeriods/pricingPeriodsDto.js"
+            }
+        },
+        "./resources/pricingPeriods/pricingPeriodsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/pricingPeriods/pricingPeriodsUrls.d.ts",
+                "default": "./dist/esm/resources/pricingPeriods/pricingPeriodsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/pricingPeriods/pricingPeriodsUrls.d.ts",
+                "default": "./dist/cjs/resources/pricingPeriods/pricingPeriodsUrls.js"
+            }
+        },
+        "./resources/proformaInvoices/proformaInvoices": {
+            "import": {
+                "types": "./dist/esm/resources/proformaInvoices/proformaInvoices.d.ts",
+                "default": "./dist/esm/resources/proformaInvoices/proformaInvoices.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/proformaInvoices/proformaInvoices.d.ts",
+                "default": "./dist/cjs/resources/proformaInvoices/proformaInvoices.js"
+            }
+        },
+        "./resources/proformaInvoices/proformaInvoicesDto": {
+            "import": {
+                "types": "./dist/esm/resources/proformaInvoices/proformaInvoicesDto.d.ts",
+                "default": "./dist/esm/resources/proformaInvoices/proformaInvoicesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/proformaInvoices/proformaInvoicesDto.d.ts",
+                "default": "./dist/cjs/resources/proformaInvoices/proformaInvoicesDto.js"
+            }
+        },
+        "./resources/proformaInvoices/proformaInvoicesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/proformaInvoices/proformaInvoicesUrls.d.ts",
+                "default": "./dist/esm/resources/proformaInvoices/proformaInvoicesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/proformaInvoices/proformaInvoicesUrls.d.ts",
+                "default": "./dist/cjs/resources/proformaInvoices/proformaInvoicesUrls.js"
+            }
+        },
+        "./resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications.js"
+            }
+        },
+        "./resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto.js"
+            }
+        },
+        "./resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsUrls.js"
+            }
+        },
+        "./resources/purchaseCreditNotes/purchaseCreditNotes": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotes.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotes.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotes.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotes.js"
+            }
+        },
+        "./resources/purchaseCreditNotes/purchaseCreditNotesDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotesDto.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotesDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotesDto.js"
+            }
+        },
+        "./resources/purchaseCreditNotes/purchaseCreditNotesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotesUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseCreditNotes/purchaseCreditNotesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotesUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseCreditNotes/purchaseCreditNotesUrls.js"
+            }
+        },
+        "./resources/purchaseExpress/purchaseExpress": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseExpress/purchaseExpress.d.ts",
+                "default": "./dist/esm/resources/purchaseExpress/purchaseExpress.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseExpress/purchaseExpress.d.ts",
+                "default": "./dist/cjs/resources/purchaseExpress/purchaseExpress.js"
+            }
+        },
+        "./resources/purchaseExpress/purchaseExpressDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseExpress/purchaseExpressDto.d.ts",
+                "default": "./dist/esm/resources/purchaseExpress/purchaseExpressDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseExpress/purchaseExpressDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseExpress/purchaseExpressDto.js"
+            }
+        },
+        "./resources/purchaseExpress/purchaseExpressUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseExpress/purchaseExpressUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseExpress/purchaseExpressUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseExpress/purchaseExpressUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseExpress/purchaseExpressUrls.js"
+            }
+        },
+        "./resources/purchaseInvoices/purchaseInvoices": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseInvoices/purchaseInvoices.d.ts",
+                "default": "./dist/esm/resources/purchaseInvoices/purchaseInvoices.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseInvoices/purchaseInvoices.d.ts",
+                "default": "./dist/cjs/resources/purchaseInvoices/purchaseInvoices.js"
+            }
+        },
+        "./resources/purchaseInvoices/purchaseInvoicesDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseInvoices/purchaseInvoicesDto.d.ts",
+                "default": "./dist/esm/resources/purchaseInvoices/purchaseInvoicesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseInvoices/purchaseInvoicesDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseInvoices/purchaseInvoicesDto.js"
+            }
+        },
+        "./resources/purchaseInvoices/purchaseInvoicesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseInvoices/purchaseInvoicesUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseInvoices/purchaseInvoicesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseInvoices/purchaseInvoicesUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseInvoices/purchaseInvoicesUrls.js"
+            }
+        },
+        "./resources/purchaseOrders/purchaseOrders": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseOrders/purchaseOrders.d.ts",
+                "default": "./dist/esm/resources/purchaseOrders/purchaseOrders.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseOrders/purchaseOrders.d.ts",
+                "default": "./dist/cjs/resources/purchaseOrders/purchaseOrders.js"
+            }
+        },
+        "./resources/purchaseOrders/purchaseOrdersDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseOrders/purchaseOrdersDto.d.ts",
+                "default": "./dist/esm/resources/purchaseOrders/purchaseOrdersDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseOrders/purchaseOrdersDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseOrders/purchaseOrdersDto.js"
+            }
+        },
+        "./resources/purchaseOrders/purchaseOrdersUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseOrders/purchaseOrdersUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseOrders/purchaseOrdersUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseOrders/purchaseOrdersUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseOrders/purchaseOrdersUrls.js"
+            }
+        },
+        "./resources/purchasePayments/purchasePayments": {
+            "import": {
+                "types": "./dist/esm/resources/purchasePayments/purchasePayments.d.ts",
+                "default": "./dist/esm/resources/purchasePayments/purchasePayments.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchasePayments/purchasePayments.d.ts",
+                "default": "./dist/cjs/resources/purchasePayments/purchasePayments.js"
+            }
+        },
+        "./resources/purchasePayments/purchasePaymentsDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchasePayments/purchasePaymentsDto.d.ts",
+                "default": "./dist/esm/resources/purchasePayments/purchasePaymentsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchasePayments/purchasePaymentsDto.d.ts",
+                "default": "./dist/cjs/resources/purchasePayments/purchasePaymentsDto.js"
+            }
+        },
+        "./resources/purchasePayments/purchasePaymentsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchasePayments/purchasePaymentsUrls.d.ts",
+                "default": "./dist/esm/resources/purchasePayments/purchasePaymentsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchasePayments/purchasePaymentsUrls.d.ts",
+                "default": "./dist/cjs/resources/purchasePayments/purchasePaymentsUrls.js"
+            }
+        },
+        "./resources/purchaseRefunds/purchaseRefunds": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseRefunds/purchaseRefunds.d.ts",
+                "default": "./dist/esm/resources/purchaseRefunds/purchaseRefunds.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseRefunds/purchaseRefunds.d.ts",
+                "default": "./dist/cjs/resources/purchaseRefunds/purchaseRefunds.js"
+            }
+        },
+        "./resources/purchaseRefunds/purchaseRefundsDto": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseRefunds/purchaseRefundsDto.d.ts",
+                "default": "./dist/esm/resources/purchaseRefunds/purchaseRefundsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseRefunds/purchaseRefundsDto.d.ts",
+                "default": "./dist/cjs/resources/purchaseRefunds/purchaseRefundsDto.js"
+            }
+        },
+        "./resources/purchaseRefunds/purchaseRefundsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/purchaseRefunds/purchaseRefundsUrls.d.ts",
+                "default": "./dist/esm/resources/purchaseRefunds/purchaseRefundsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/purchaseRefunds/purchaseRefundsUrls.d.ts",
+                "default": "./dist/cjs/resources/purchaseRefunds/purchaseRefundsUrls.js"
+            }
+        },
+        "./resources/quoteOrders/quoteOrders": {
+            "import": {
+                "types": "./dist/esm/resources/quoteOrders/quoteOrders.d.ts",
+                "default": "./dist/esm/resources/quoteOrders/quoteOrders.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/quoteOrders/quoteOrders.d.ts",
+                "default": "./dist/cjs/resources/quoteOrders/quoteOrders.js"
+            }
+        },
+        "./resources/quoteOrders/quoteOrdersDto": {
+            "import": {
+                "types": "./dist/esm/resources/quoteOrders/quoteOrdersDto.d.ts",
+                "default": "./dist/esm/resources/quoteOrders/quoteOrdersDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/quoteOrders/quoteOrdersDto.d.ts",
+                "default": "./dist/cjs/resources/quoteOrders/quoteOrdersDto.js"
+            }
+        },
+        "./resources/quoteOrders/quoteOrdersUrls": {
+            "import": {
+                "types": "./dist/esm/resources/quoteOrders/quoteOrdersUrls.d.ts",
+                "default": "./dist/esm/resources/quoteOrders/quoteOrdersUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/quoteOrders/quoteOrdersUrls.d.ts",
+                "default": "./dist/cjs/resources/quoteOrders/quoteOrdersUrls.js"
+            }
+        },
+        "./resources/receiveTerms/receiveTerms": {
+            "import": {
+                "types": "./dist/esm/resources/receiveTerms/receiveTerms.d.ts",
+                "default": "./dist/esm/resources/receiveTerms/receiveTerms.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/receiveTerms/receiveTerms.d.ts",
+                "default": "./dist/cjs/resources/receiveTerms/receiveTerms.js"
+            }
+        },
+        "./resources/receiveTerms/receiveTermsDto": {
+            "import": {
+                "types": "./dist/esm/resources/receiveTerms/receiveTermsDto.d.ts",
+                "default": "./dist/esm/resources/receiveTerms/receiveTermsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/receiveTerms/receiveTermsDto.d.ts",
+                "default": "./dist/cjs/resources/receiveTerms/receiveTermsDto.js"
+            }
+        },
+        "./resources/receiveTerms/receiveTermsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/receiveTerms/receiveTermsUrls.d.ts",
+                "default": "./dist/esm/resources/receiveTerms/receiveTermsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/receiveTerms/receiveTermsUrls.d.ts",
+                "default": "./dist/cjs/resources/receiveTerms/receiveTermsUrls.js"
+            }
+        },
+        "./resources/reconciliations/reconciliations": {
+            "import": {
+                "types": "./dist/esm/resources/reconciliations/reconciliations.d.ts",
+                "default": "./dist/esm/resources/reconciliations/reconciliations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reconciliations/reconciliations.d.ts",
+                "default": "./dist/cjs/resources/reconciliations/reconciliations.js"
+            }
+        },
+        "./resources/reconciliations/reconciliationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/reconciliations/reconciliationsDto.d.ts",
+                "default": "./dist/esm/resources/reconciliations/reconciliationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reconciliations/reconciliationsDto.d.ts",
+                "default": "./dist/cjs/resources/reconciliations/reconciliationsDto.js"
+            }
+        },
+        "./resources/reconciliations/reconciliationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/reconciliations/reconciliationsUrls.d.ts",
+                "default": "./dist/esm/resources/reconciliations/reconciliationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reconciliations/reconciliationsUrls.d.ts",
+                "default": "./dist/cjs/resources/reconciliations/reconciliationsUrls.js"
+            }
+        },
+        "./resources/refunds/refunds": {
+            "import": {
+                "types": "./dist/esm/resources/refunds/refunds.d.ts",
+                "default": "./dist/esm/resources/refunds/refunds.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/refunds/refunds.d.ts",
+                "default": "./dist/cjs/resources/refunds/refunds.js"
+            }
+        },
+        "./resources/refunds/refundsDto": {
+            "import": {
+                "types": "./dist/esm/resources/refunds/refundsDto.d.ts",
+                "default": "./dist/esm/resources/refunds/refundsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/refunds/refundsDto.d.ts",
+                "default": "./dist/cjs/resources/refunds/refundsDto.js"
+            }
+        },
+        "./resources/refunds/refundsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/refunds/refundsUrls.d.ts",
+                "default": "./dist/esm/resources/refunds/refundsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/refunds/refundsUrls.d.ts",
+                "default": "./dist/cjs/resources/refunds/refundsUrls.js"
+            }
+        },
+        "./resources/rentalAssets/rentalAssets": {
+            "import": {
+                "types": "./dist/esm/resources/rentalAssets/rentalAssets.d.ts",
+                "default": "./dist/esm/resources/rentalAssets/rentalAssets.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/rentalAssets/rentalAssets.d.ts",
+                "default": "./dist/cjs/resources/rentalAssets/rentalAssets.js"
+            }
+        },
+        "./resources/rentalAssets/rentalAssetsDto": {
+            "import": {
+                "types": "./dist/esm/resources/rentalAssets/rentalAssetsDto.d.ts",
+                "default": "./dist/esm/resources/rentalAssets/rentalAssetsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/rentalAssets/rentalAssetsDto.d.ts",
+                "default": "./dist/cjs/resources/rentalAssets/rentalAssetsDto.js"
+            }
+        },
+        "./resources/rentalAssets/rentalAssetsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/rentalAssets/rentalAssetsUrls.d.ts",
+                "default": "./dist/esm/resources/rentalAssets/rentalAssetsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/rentalAssets/rentalAssetsUrls.d.ts",
+                "default": "./dist/cjs/resources/rentalAssets/rentalAssetsUrls.js"
+            }
+        },
+        "./resources/reports/reports": {
+            "import": {
+                "types": "./dist/esm/resources/reports/reports.d.ts",
+                "default": "./dist/esm/resources/reports/reports.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reports/reports.d.ts",
+                "default": "./dist/cjs/resources/reports/reports.js"
+            }
+        },
+        "./resources/reports/reportsDto": {
+            "import": {
+                "types": "./dist/esm/resources/reports/reportsDto.d.ts",
+                "default": "./dist/esm/resources/reports/reportsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reports/reportsDto.d.ts",
+                "default": "./dist/cjs/resources/reports/reportsDto.js"
+            }
+        },
+        "./resources/reports/reportsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/reports/reportsUrls.d.ts",
+                "default": "./dist/esm/resources/reports/reportsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/reports/reportsUrls.d.ts",
+                "default": "./dist/cjs/resources/reports/reportsUrls.js"
+            }
+        },
+        "./resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations": {
+            "import": {
+                "types": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations.d.ts",
+                "default": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations.d.ts",
+                "default": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations.js"
+            }
+        },
+        "./resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto.d.ts",
+                "default": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto.d.ts",
+                "default": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto.js"
+            }
+        },
+        "./resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsUrls.d.ts",
+                "default": "./dist/esm/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsUrls.d.ts",
+                "default": "./dist/cjs/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsUrls.js"
+            }
+        },
+        "./resources/returnVendorAuthorizations/returnVendorAuthorizations": {
+            "import": {
+                "types": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizations.d.ts",
+                "default": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizations.d.ts",
+                "default": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizations.js"
+            }
+        },
+        "./resources/returnVendorAuthorizations/returnVendorAuthorizationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizationsDto.d.ts",
+                "default": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizationsDto.d.ts",
+                "default": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizationsDto.js"
+            }
+        },
+        "./resources/returnVendorAuthorizations/returnVendorAuthorizationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizationsUrls.d.ts",
+                "default": "./dist/esm/resources/returnVendorAuthorizations/returnVendorAuthorizationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizationsUrls.d.ts",
+                "default": "./dist/cjs/resources/returnVendorAuthorizations/returnVendorAuthorizationsUrls.js"
+            }
+        },
+        "./resources/roles/roles": {
+            "import": {
+                "types": "./dist/esm/resources/roles/roles.d.ts",
+                "default": "./dist/esm/resources/roles/roles.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/roles/roles.d.ts",
+                "default": "./dist/cjs/resources/roles/roles.js"
+            }
+        },
+        "./resources/roles/rolesDto": {
+            "import": {
+                "types": "./dist/esm/resources/roles/rolesDto.d.ts",
+                "default": "./dist/esm/resources/roles/rolesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/roles/rolesDto.d.ts",
+                "default": "./dist/cjs/resources/roles/rolesDto.js"
+            }
+        },
+        "./resources/roles/rolesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/roles/rolesUrls.d.ts",
+                "default": "./dist/esm/resources/roles/rolesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/roles/rolesUrls.d.ts",
+                "default": "./dist/cjs/resources/roles/rolesUrls.js"
+            }
+        },
+        "./resources/salesReps/salesReps": {
+            "import": {
+                "types": "./dist/esm/resources/salesReps/salesReps.d.ts",
+                "default": "./dist/esm/resources/salesReps/salesReps.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salesReps/salesReps.d.ts",
+                "default": "./dist/cjs/resources/salesReps/salesReps.js"
+            }
+        },
+        "./resources/salesReps/salesRepsDto": {
+            "import": {
+                "types": "./dist/esm/resources/salesReps/salesRepsDto.d.ts",
+                "default": "./dist/esm/resources/salesReps/salesRepsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salesReps/salesRepsDto.d.ts",
+                "default": "./dist/cjs/resources/salesReps/salesRepsDto.js"
+            }
+        },
+        "./resources/salesReps/salesRepsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/salesReps/salesRepsUrls.d.ts",
+                "default": "./dist/esm/resources/salesReps/salesRepsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salesReps/salesRepsUrls.d.ts",
+                "default": "./dist/cjs/resources/salesReps/salesRepsUrls.js"
+            }
+        },
+        "./resources/salutations/salutations": {
+            "import": {
+                "types": "./dist/esm/resources/salutations/salutations.d.ts",
+                "default": "./dist/esm/resources/salutations/salutations.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salutations/salutations.d.ts",
+                "default": "./dist/cjs/resources/salutations/salutations.js"
+            }
+        },
+        "./resources/salutations/salutationsDto": {
+            "import": {
+                "types": "./dist/esm/resources/salutations/salutationsDto.d.ts",
+                "default": "./dist/esm/resources/salutations/salutationsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salutations/salutationsDto.d.ts",
+                "default": "./dist/cjs/resources/salutations/salutationsDto.js"
+            }
+        },
+        "./resources/salutations/salutationsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/salutations/salutationsUrls.d.ts",
+                "default": "./dist/esm/resources/salutations/salutationsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/salutations/salutationsUrls.d.ts",
+                "default": "./dist/cjs/resources/salutations/salutationsUrls.js"
+            }
+        },
+        "./resources/settings/settings": {
+            "import": {
+                "types": "./dist/esm/resources/settings/settings.d.ts",
+                "default": "./dist/esm/resources/settings/settings.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settings/settings.d.ts",
+                "default": "./dist/cjs/resources/settings/settings.js"
+            }
+        },
+        "./resources/settings/settingsDto": {
+            "import": {
+                "types": "./dist/esm/resources/settings/settingsDto.d.ts",
+                "default": "./dist/esm/resources/settings/settingsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settings/settingsDto.d.ts",
+                "default": "./dist/cjs/resources/settings/settingsDto.js"
+            }
+        },
+        "./resources/settings/settingsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/settings/settingsUrls.d.ts",
+                "default": "./dist/esm/resources/settings/settingsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settings/settingsUrls.d.ts",
+                "default": "./dist/cjs/resources/settings/settingsUrls.js"
+            }
+        },
+        "./resources/settingsWorkflows/settingsWorkflows": {
+            "import": {
+                "types": "./dist/esm/resources/settingsWorkflows/settingsWorkflows.d.ts",
+                "default": "./dist/esm/resources/settingsWorkflows/settingsWorkflows.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settingsWorkflows/settingsWorkflows.d.ts",
+                "default": "./dist/cjs/resources/settingsWorkflows/settingsWorkflows.js"
+            }
+        },
+        "./resources/settingsWorkflows/settingsWorkflowsDto": {
+            "import": {
+                "types": "./dist/esm/resources/settingsWorkflows/settingsWorkflowsDto.d.ts",
+                "default": "./dist/esm/resources/settingsWorkflows/settingsWorkflowsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settingsWorkflows/settingsWorkflowsDto.d.ts",
+                "default": "./dist/cjs/resources/settingsWorkflows/settingsWorkflowsDto.js"
+            }
+        },
+        "./resources/settingsWorkflows/settingsWorkflowsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/settingsWorkflows/settingsWorkflowsUrls.d.ts",
+                "default": "./dist/esm/resources/settingsWorkflows/settingsWorkflowsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/settingsWorkflows/settingsWorkflowsUrls.d.ts",
+                "default": "./dist/cjs/resources/settingsWorkflows/settingsWorkflowsUrls.js"
+            }
+        },
+        "./resources/shippingPackages/shippingPackages": {
+            "import": {
+                "types": "./dist/esm/resources/shippingPackages/shippingPackages.d.ts",
+                "default": "./dist/esm/resources/shippingPackages/shippingPackages.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingPackages/shippingPackages.d.ts",
+                "default": "./dist/cjs/resources/shippingPackages/shippingPackages.js"
+            }
+        },
+        "./resources/shippingPackages/shippingPackagesDto": {
+            "import": {
+                "types": "./dist/esm/resources/shippingPackages/shippingPackagesDto.d.ts",
+                "default": "./dist/esm/resources/shippingPackages/shippingPackagesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingPackages/shippingPackagesDto.d.ts",
+                "default": "./dist/cjs/resources/shippingPackages/shippingPackagesDto.js"
+            }
+        },
+        "./resources/shippingPackages/shippingPackagesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/shippingPackages/shippingPackagesUrls.d.ts",
+                "default": "./dist/esm/resources/shippingPackages/shippingPackagesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingPackages/shippingPackagesUrls.d.ts",
+                "default": "./dist/cjs/resources/shippingPackages/shippingPackagesUrls.js"
+            }
+        },
+        "./resources/shippingRules/shippingRules": {
+            "import": {
+                "types": "./dist/esm/resources/shippingRules/shippingRules.d.ts",
+                "default": "./dist/esm/resources/shippingRules/shippingRules.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingRules/shippingRules.d.ts",
+                "default": "./dist/cjs/resources/shippingRules/shippingRules.js"
+            }
+        },
+        "./resources/shippingRules/shippingRulesDto": {
+            "import": {
+                "types": "./dist/esm/resources/shippingRules/shippingRulesDto.d.ts",
+                "default": "./dist/esm/resources/shippingRules/shippingRulesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingRules/shippingRulesDto.d.ts",
+                "default": "./dist/cjs/resources/shippingRules/shippingRulesDto.js"
+            }
+        },
+        "./resources/shippingRules/shippingRulesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/shippingRules/shippingRulesUrls.d.ts",
+                "default": "./dist/esm/resources/shippingRules/shippingRulesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/shippingRules/shippingRulesUrls.d.ts",
+                "default": "./dist/cjs/resources/shippingRules/shippingRulesUrls.js"
+            }
+        },
+        "./resources/systemEvents/systemEvents": {
+            "import": {
+                "types": "./dist/esm/resources/systemEvents/systemEvents.d.ts",
+                "default": "./dist/esm/resources/systemEvents/systemEvents.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/systemEvents/systemEvents.d.ts",
+                "default": "./dist/cjs/resources/systemEvents/systemEvents.js"
+            }
+        },
+        "./resources/systemEvents/systemEventsDto": {
+            "import": {
+                "types": "./dist/esm/resources/systemEvents/systemEventsDto.d.ts",
+                "default": "./dist/esm/resources/systemEvents/systemEventsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/systemEvents/systemEventsDto.d.ts",
+                "default": "./dist/cjs/resources/systemEvents/systemEventsDto.js"
+            }
+        },
+        "./resources/systemEvents/systemEventsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/systemEvents/systemEventsUrls.d.ts",
+                "default": "./dist/esm/resources/systemEvents/systemEventsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/systemEvents/systemEventsUrls.d.ts",
+                "default": "./dist/cjs/resources/systemEvents/systemEventsUrls.js"
+            }
+        },
+        "./resources/tasks/tasks": {
+            "import": {
+                "types": "./dist/esm/resources/tasks/tasks.d.ts",
+                "default": "./dist/esm/resources/tasks/tasks.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/tasks/tasks.d.ts",
+                "default": "./dist/cjs/resources/tasks/tasks.js"
+            }
+        },
+        "./resources/tasks/tasksDto": {
+            "import": {
+                "types": "./dist/esm/resources/tasks/tasksDto.d.ts",
+                "default": "./dist/esm/resources/tasks/tasksDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/tasks/tasksDto.d.ts",
+                "default": "./dist/cjs/resources/tasks/tasksDto.js"
+            }
+        },
+        "./resources/tasks/tasksUrls": {
+            "import": {
+                "types": "./dist/esm/resources/tasks/tasksUrls.d.ts",
+                "default": "./dist/esm/resources/tasks/tasksUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/tasks/tasksUrls.d.ts",
+                "default": "./dist/cjs/resources/tasks/tasksUrls.js"
+            }
+        },
+        "./resources/teams/teams": {
+            "import": {
+                "types": "./dist/esm/resources/teams/teams.d.ts",
+                "default": "./dist/esm/resources/teams/teams.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/teams/teams.d.ts",
+                "default": "./dist/cjs/resources/teams/teams.js"
+            }
+        },
+        "./resources/teams/teamsDto": {
+            "import": {
+                "types": "./dist/esm/resources/teams/teamsDto.d.ts",
+                "default": "./dist/esm/resources/teams/teamsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/teams/teamsDto.d.ts",
+                "default": "./dist/cjs/resources/teams/teamsDto.js"
+            }
+        },
+        "./resources/teams/teamsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/teams/teamsUrls.d.ts",
+                "default": "./dist/esm/resources/teams/teamsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/teams/teamsUrls.d.ts",
+                "default": "./dist/cjs/resources/teams/teamsUrls.js"
+            }
+        },
+        "./resources/timePeriods/timePeriods": {
+            "import": {
+                "types": "./dist/esm/resources/timePeriods/timePeriods.d.ts",
+                "default": "./dist/esm/resources/timePeriods/timePeriods.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timePeriods/timePeriods.d.ts",
+                "default": "./dist/cjs/resources/timePeriods/timePeriods.js"
+            }
+        },
+        "./resources/timePeriods/timePeriodsDto": {
+            "import": {
+                "types": "./dist/esm/resources/timePeriods/timePeriodsDto.d.ts",
+                "default": "./dist/esm/resources/timePeriods/timePeriodsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timePeriods/timePeriodsDto.d.ts",
+                "default": "./dist/cjs/resources/timePeriods/timePeriodsDto.js"
+            }
+        },
+        "./resources/timePeriods/timePeriodsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/timePeriods/timePeriodsUrls.d.ts",
+                "default": "./dist/esm/resources/timePeriods/timePeriodsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timePeriods/timePeriodsUrls.d.ts",
+                "default": "./dist/cjs/resources/timePeriods/timePeriodsUrls.js"
+            }
+        },
+        "./resources/timesheets/timesheets": {
+            "import": {
+                "types": "./dist/esm/resources/timesheets/timesheets.d.ts",
+                "default": "./dist/esm/resources/timesheets/timesheets.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timesheets/timesheets.d.ts",
+                "default": "./dist/cjs/resources/timesheets/timesheets.js"
+            }
+        },
+        "./resources/timesheets/timesheetsDto": {
+            "import": {
+                "types": "./dist/esm/resources/timesheets/timesheetsDto.d.ts",
+                "default": "./dist/esm/resources/timesheets/timesheetsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timesheets/timesheetsDto.d.ts",
+                "default": "./dist/cjs/resources/timesheets/timesheetsDto.js"
+            }
+        },
+        "./resources/timesheets/timesheetsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/timesheets/timesheetsUrls.d.ts",
+                "default": "./dist/esm/resources/timesheets/timesheetsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/timesheets/timesheetsUrls.d.ts",
+                "default": "./dist/cjs/resources/timesheets/timesheetsUrls.js"
+            }
+        },
+        "./resources/uom/uom": {
+            "import": {
+                "types": "./dist/esm/resources/uom/uom.d.ts",
+                "default": "./dist/esm/resources/uom/uom.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/uom/uom.d.ts",
+                "default": "./dist/cjs/resources/uom/uom.js"
+            }
+        },
+        "./resources/uom/uomDto": {
+            "import": {
+                "types": "./dist/esm/resources/uom/uomDto.d.ts",
+                "default": "./dist/esm/resources/uom/uomDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/uom/uomDto.d.ts",
+                "default": "./dist/cjs/resources/uom/uomDto.js"
+            }
+        },
+        "./resources/uom/uomUrls": {
+            "import": {
+                "types": "./dist/esm/resources/uom/uomUrls.d.ts",
+                "default": "./dist/esm/resources/uom/uomUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/uom/uomUrls.d.ts",
+                "default": "./dist/cjs/resources/uom/uomUrls.js"
+            }
+        },
+        "./resources/usages/usages": {
+            "import": {
+                "types": "./dist/esm/resources/usages/usages.d.ts",
+                "default": "./dist/esm/resources/usages/usages.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/usages/usages.d.ts",
+                "default": "./dist/cjs/resources/usages/usages.js"
+            }
+        },
+        "./resources/usages/usagesDto": {
+            "import": {
+                "types": "./dist/esm/resources/usages/usagesDto.d.ts",
+                "default": "./dist/esm/resources/usages/usagesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/usages/usagesDto.d.ts",
+                "default": "./dist/cjs/resources/usages/usagesDto.js"
+            }
+        },
+        "./resources/usages/usagesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/usages/usagesUrls.d.ts",
+                "default": "./dist/esm/resources/usages/usagesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/usages/usagesUrls.d.ts",
+                "default": "./dist/cjs/resources/usages/usagesUrls.js"
+            }
+        },
+        "./resources/webhooks/webhooks": {
+            "import": {
+                "types": "./dist/esm/resources/webhooks/webhooks.d.ts",
+                "default": "./dist/esm/resources/webhooks/webhooks.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/webhooks/webhooks.d.ts",
+                "default": "./dist/cjs/resources/webhooks/webhooks.js"
+            }
+        },
+        "./resources/webhooks/webhooksDto": {
+            "import": {
+                "types": "./dist/esm/resources/webhooks/webhooksDto.d.ts",
+                "default": "./dist/esm/resources/webhooks/webhooksDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/webhooks/webhooksDto.d.ts",
+                "default": "./dist/cjs/resources/webhooks/webhooksDto.js"
+            }
+        },
+        "./resources/webhooks/webhooksUrls": {
+            "import": {
+                "types": "./dist/esm/resources/webhooks/webhooksUrls.d.ts",
+                "default": "./dist/esm/resources/webhooks/webhooksUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/webhooks/webhooksUrls.d.ts",
+                "default": "./dist/cjs/resources/webhooks/webhooksUrls.js"
+            }
+        },
+        "./resources/workflows/workflows": {
+            "import": {
+                "types": "./dist/esm/resources/workflows/workflows.d.ts",
+                "default": "./dist/esm/resources/workflows/workflows.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/workflows/workflows.d.ts",
+                "default": "./dist/cjs/resources/workflows/workflows.js"
+            }
+        },
+        "./resources/workflows/workflowsDto": {
+            "import": {
+                "types": "./dist/esm/resources/workflows/workflowsDto.d.ts",
+                "default": "./dist/esm/resources/workflows/workflowsDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/workflows/workflowsDto.d.ts",
+                "default": "./dist/cjs/resources/workflows/workflowsDto.js"
+            }
+        },
+        "./resources/workflows/workflowsUrls": {
+            "import": {
+                "types": "./dist/esm/resources/workflows/workflowsUrls.d.ts",
+                "default": "./dist/esm/resources/workflows/workflowsUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/workflows/workflowsUrls.d.ts",
+                "default": "./dist/cjs/resources/workflows/workflowsUrls.js"
+            }
+        },
+        "./resources/zones/zones": {
+            "import": {
+                "types": "./dist/esm/resources/zones/zones.d.ts",
+                "default": "./dist/esm/resources/zones/zones.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/zones/zones.d.ts",
+                "default": "./dist/cjs/resources/zones/zones.js"
+            }
+        },
+        "./resources/zones/zonesDto": {
+            "import": {
+                "types": "./dist/esm/resources/zones/zonesDto.d.ts",
+                "default": "./dist/esm/resources/zones/zonesDto.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/zones/zonesDto.d.ts",
+                "default": "./dist/cjs/resources/zones/zonesDto.js"
+            }
+        },
+        "./resources/zones/zonesUrls": {
+            "import": {
+                "types": "./dist/esm/resources/zones/zonesUrls.d.ts",
+                "default": "./dist/esm/resources/zones/zonesUrls.js"
+            },
+            "require": {
+                "types": "./dist/cjs/resources/zones/zonesUrls.d.ts",
+                "default": "./dist/cjs/resources/zones/zonesUrls.js"
+            }
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "test": "vitest run",
+        "test:credentials": "vitest run test/credentials.test.ts",
+        "test:abaFiles": "vitest run test/resources/abaFiles/abaFiles.test.ts",
+        "test:abaFiles:map": "vitest run test/resources/abaFiles/abaFilesMap.test.ts",
+        "test:abaFiles:json": "vitest run test/resources/abaFiles/abaFilesJson.test.ts",
+        "test:abaFiles:dto": "vitest run test/resources/abaFiles/abaFilesDto.test.ts",
+        "test:accountEmails": "vitest run test/resources/accountEmails/accountEmails.test.ts",
+        "test:accountEmails:map": "vitest run test/resources/accountEmails/accountEmailsMap.test.ts",
+        "test:accountEmails:json": "vitest run test/resources/accountEmails/accountEmailsJson.test.ts",
+        "test:accountEmails:dto": "vitest run test/resources/accountEmails/accountEmailsDto.test.ts",
+        "test:accountGroups": "vitest run test/resources/accountGroups/accountGroups.test.ts",
+        "test:accountGroups:map": "vitest run test/resources/accountGroups/accountGroupsMap.test.ts",
+        "test:accountGroups:json": "vitest run test/resources/accountGroups/accountGroupsJson.test.ts",
+        "test:accountGroups:dto": "vitest run test/resources/accountGroups/accountGroupsDto.test.ts",
+        "test:accountingCodes": "vitest run test/resources/accountingCodes/accountingCodes.test.ts",
+        "test:accountingCodes:map": "vitest run test/resources/accountingCodes/accountingCodesMap.test.ts",
+        "test:accountingCodes:json": "vitest run test/resources/accountingCodes/accountingCodesJson.test.ts",
+        "test:accountingCodes:dto": "vitest run test/resources/accountingCodes/accountingCodesDto.test.ts",
+        "test:accounts": "vitest run test/resources/accounts/accounts.test.ts",
+        "test:accounts:map": "vitest run test/resources/accounts/accountsMap.test.ts",
+        "test:accounts:json": "vitest run test/resources/accounts/accountsJson.test.ts",
+        "test:accounts:dto": "vitest run test/resources/accounts/accountsDto.test.ts",
+        "test:actionScripts": "vitest run test/resources/actionScripts/actionScripts.test.ts",
+        "test:actionScripts:map": "vitest run test/resources/actionScripts/actionScriptsMap.test.ts",
+        "test:actionScripts:json": "vitest run test/resources/actionScripts/actionScriptsJson.test.ts",
+        "test:actionScripts:dto": "vitest run test/resources/actionScripts/actionScriptsDto.test.ts",
+        "test:additionalCodes": "vitest run test/resources/additionalCodes/additionalCodes.test.ts",
+        "test:additionalCodes:map": "vitest run test/resources/additionalCodes/additionalCodesMap.test.ts",
+        "test:additionalCodes:json": "vitest run test/resources/additionalCodes/additionalCodesJson.test.ts",
+        "test:additionalCodes:dto": "vitest run test/resources/additionalCodes/additionalCodesDto.test.ts",
+        "test:alertResponsibilities": "vitest run test/resources/alertResponsibilities/alertResponsibilities.test.ts",
+        "test:alertResponsibilities:map": "vitest run test/resources/alertResponsibilities/alertResponsibilitiesMap.test.ts",
+        "test:alertResponsibilities:json": "vitest run test/resources/alertResponsibilities/alertResponsibilitiesJson.test.ts",
+        "test:alertResponsibilities:dto": "vitest run test/resources/alertResponsibilities/alertResponsibilitiesDto.test.ts",
+        "test:alertResponsibility": "vitest run test/resources/alertResponsibility/alertResponsibility.test.ts",
+        "test:alertResponsibility:map": "vitest run test/resources/alertResponsibility/alertResponsibilityMap.test.ts",
+        "test:alertResponsibility:json": "vitest run test/resources/alertResponsibility/alertResponsibilityJson.test.ts",
+        "test:alertResponsibility:dto": "vitest run test/resources/alertResponsibility/alertResponsibilityDto.test.ts",
+        "test:alerts": "vitest run test/resources/alerts/alerts.test.ts",
+        "test:alerts:map": "vitest run test/resources/alerts/alertsMap.test.ts",
+        "test:alerts:json": "vitest run test/resources/alerts/alertsJson.test.ts",
+        "test:alerts:dto": "vitest run test/resources/alerts/alertsDto.test.ts",
+        "test:applications": "vitest run test/resources/applications/applications.test.ts",
+        "test:applications:map": "vitest run test/resources/applications/applicationsMap.test.ts",
+        "test:applications:json": "vitest run test/resources/applications/applicationsJson.test.ts",
+        "test:applications:dto": "vitest run test/resources/applications/applicationsDto.test.ts",
+        "test:approvalProfiles": "vitest run test/resources/approvalProfiles/approvalProfiles.test.ts",
+        "test:approvalProfiles:map": "vitest run test/resources/approvalProfiles/approvalProfilesMap.test.ts",
+        "test:approvalProfiles:json": "vitest run test/resources/approvalProfiles/approvalProfilesJson.test.ts",
+        "test:approvalProfiles:dto": "vitest run test/resources/approvalProfiles/approvalProfilesDto.test.ts",
+        "test:approvalUserGroups": "vitest run test/resources/approvalUserGroups/approvalUserGroups.test.ts",
+        "test:approvalUserGroups:map": "vitest run test/resources/approvalUserGroups/approvalUserGroupsMap.test.ts",
+        "test:approvalUserGroups:json": "vitest run test/resources/approvalUserGroups/approvalUserGroupsJson.test.ts",
+        "test:approvalUserGroups:dto": "vitest run test/resources/approvalUserGroups/approvalUserGroupsDto.test.ts",
+        "test:approvals": "vitest run test/resources/approvals/approvals.test.ts",
+        "test:approvals:map": "vitest run test/resources/approvals/approvalsMap.test.ts",
+        "test:approvals:json": "vitest run test/resources/approvals/approvalsJson.test.ts",
+        "test:approvals:dto": "vitest run test/resources/approvals/approvalsDto.test.ts",
+        "test:attributeAttachments": "vitest run test/resources/attributeAttachments/attributeAttachments.test.ts",
+        "test:attributeAttachments:map": "vitest run test/resources/attributeAttachments/attributeAttachmentsMap.test.ts",
+        "test:attributeAttachments:json": "vitest run test/resources/attributeAttachments/attributeAttachmentsJson.test.ts",
+        "test:attributeAttachments:dto": "vitest run test/resources/attributeAttachments/attributeAttachmentsDto.test.ts",
+        "test:billingPeriods": "vitest run test/resources/billingPeriods/billingPeriods.test.ts",
+        "test:billingPeriods:map": "vitest run test/resources/billingPeriods/billingPeriodsMap.test.ts",
+        "test:billingPeriods:json": "vitest run test/resources/billingPeriods/billingPeriodsJson.test.ts",
+        "test:billingPeriods:dto": "vitest run test/resources/billingPeriods/billingPeriodsDto.test.ts",
+        "test:bookings": "vitest run test/resources/bookings/bookings.test.ts",
+        "test:bookings:map": "vitest run test/resources/bookings/bookingsMap.test.ts",
+        "test:bookings:json": "vitest run test/resources/bookings/bookingsJson.test.ts",
+        "test:bookings:dto": "vitest run test/resources/bookings/bookingsDto.test.ts",
+        "test:chargingPeriods": "vitest run test/resources/chargingPeriods/chargingPeriods.test.ts",
+        "test:chargingPeriods:map": "vitest run test/resources/chargingPeriods/chargingPeriodsMap.test.ts",
+        "test:chargingPeriods:json": "vitest run test/resources/chargingPeriods/chargingPeriodsJson.test.ts",
+        "test:chargingPeriods:dto": "vitest run test/resources/chargingPeriods/chargingPeriodsDto.test.ts",
+        "test:communicationProfiles": "vitest run test/resources/communicationProfiles/communicationProfiles.test.ts",
+        "test:communicationProfiles:map": "vitest run test/resources/communicationProfiles/communicationProfilesMap.test.ts",
+        "test:communicationProfiles:json": "vitest run test/resources/communicationProfiles/communicationProfilesJson.test.ts",
+        "test:communicationProfiles:dto": "vitest run test/resources/communicationProfiles/communicationProfilesDto.test.ts",
+        "test:countries": "vitest run test/resources/countries/countries.test.ts",
+        "test:countries:map": "vitest run test/resources/countries/countriesMap.test.ts",
+        "test:countries:json": "vitest run test/resources/countries/countriesJson.test.ts",
+        "test:countries:dto": "vitest run test/resources/countries/countriesDto.test.ts",
+        "test:creditNoteApplications": "vitest run test/resources/creditNoteApplications/creditNoteApplications.test.ts",
+        "test:creditNoteApplications:map": "vitest run test/resources/creditNoteApplications/creditNoteApplicationsMap.test.ts",
+        "test:creditNoteApplications:json": "vitest run test/resources/creditNoteApplications/creditNoteApplicationsJson.test.ts",
+        "test:creditNoteApplications:dto": "vitest run test/resources/creditNoteApplications/creditNoteApplicationsDto.test.ts",
+        "test:creditNotes": "vitest run test/resources/creditNotes/creditNotes.test.ts",
+        "test:creditNotes:map": "vitest run test/resources/creditNotes/creditNotesMap.test.ts",
+        "test:creditNotes:json": "vitest run test/resources/creditNotes/creditNotesJson.test.ts",
+        "test:creditNotes:dto": "vitest run test/resources/creditNotes/creditNotesDto.test.ts",
+        "test:customAttributes": "vitest run test/resources/customAttributes/customAttributes.test.ts",
+        "test:customAttributes:map": "vitest run test/resources/customAttributes/customAttributesMap.test.ts",
+        "test:customAttributes:json": "vitest run test/resources/customAttributes/customAttributesJson.test.ts",
+        "test:customAttributes:dto": "vitest run test/resources/customAttributes/customAttributesDto.test.ts",
+        "test:customComponents": "vitest run test/resources/customComponents/customComponents.test.ts",
+        "test:customComponents:map": "vitest run test/resources/customComponents/customComponentsMap.test.ts",
+        "test:customComponents:json": "vitest run test/resources/customComponents/customComponentsJson.test.ts",
+        "test:customComponents:dto": "vitest run test/resources/customComponents/customComponentsDto.test.ts",
+        "test:customEvents": "vitest run test/resources/customEvents/customEvents.test.ts",
+        "test:customEvents:map": "vitest run test/resources/customEvents/customEventsMap.test.ts",
+        "test:customEvents:json": "vitest run test/resources/customEvents/customEventsJson.test.ts",
+        "test:customEvents:dto": "vitest run test/resources/customEvents/customEventsDto.test.ts",
+        "test:customFeatures": "vitest run test/resources/customFeatures/customFeatures.test.ts",
+        "test:customFeatures:map": "vitest run test/resources/customFeatures/customFeaturesMap.test.ts",
+        "test:customFeatures:json": "vitest run test/resources/customFeatures/customFeaturesJson.test.ts",
+        "test:customFeatures:dto": "vitest run test/resources/customFeatures/customFeaturesDto.test.ts",
+        "test:customFields": "vitest run test/resources/customFields/customFields.test.ts",
+        "test:customFields:map": "vitest run test/resources/customFields/customFieldsMap.test.ts",
+        "test:customFields:json": "vitest run test/resources/customFields/customFieldsJson.test.ts",
+        "test:customFields:dto": "vitest run test/resources/customFields/customFieldsDto.test.ts",
+        "test:customForms": "vitest run test/resources/customForms/customForms.test.ts",
+        "test:customForms:map": "vitest run test/resources/customForms/customFormsMap.test.ts",
+        "test:customForms:json": "vitest run test/resources/customForms/customFormsJson.test.ts",
+        "test:customForms:dto": "vitest run test/resources/customForms/customFormsDto.test.ts",
+        "test:dayOfMonth": "vitest run test/resources/dayOfMonth/dayOfMonth.test.ts",
+        "test:dayOfMonth:map": "vitest run test/resources/dayOfMonth/dayOfMonthMap.test.ts",
+        "test:dayOfMonth:json": "vitest run test/resources/dayOfMonth/dayOfMonthJson.test.ts",
+        "test:dayOfMonth:dto": "vitest run test/resources/dayOfMonth/dayOfMonthDto.test.ts",
+        "test:departments": "vitest run test/resources/departments/departments.test.ts",
+        "test:departments:map": "vitest run test/resources/departments/departmentsMap.test.ts",
+        "test:departments:json": "vitest run test/resources/departments/departmentsJson.test.ts",
+        "test:departments:dto": "vitest run test/resources/departments/departmentsDto.test.ts",
+        "test:designations": "vitest run test/resources/designations/designations.test.ts",
+        "test:designations:map": "vitest run test/resources/designations/designationsMap.test.ts",
+        "test:designations:json": "vitest run test/resources/designations/designationsJson.test.ts",
+        "test:designations:dto": "vitest run test/resources/designations/designationsDto.test.ts",
+        "test:documentTemplates": "vitest run test/resources/documentTemplates/documentTemplates.test.ts",
+        "test:documentTemplates:map": "vitest run test/resources/documentTemplates/documentTemplatesMap.test.ts",
+        "test:documentTemplates:json": "vitest run test/resources/documentTemplates/documentTemplatesJson.test.ts",
+        "test:documentTemplates:dto": "vitest run test/resources/documentTemplates/documentTemplatesDto.test.ts",
+        "test:emailTemplates": "vitest run test/resources/emailTemplates/emailTemplates.test.ts",
+        "test:emailTemplates:map": "vitest run test/resources/emailTemplates/emailTemplatesMap.test.ts",
+        "test:emailTemplates:json": "vitest run test/resources/emailTemplates/emailTemplatesJson.test.ts",
+        "test:emailTemplates:dto": "vitest run test/resources/emailTemplates/emailTemplatesDto.test.ts",
+        "test:employees": "vitest run test/resources/employees/employees.test.ts",
+        "test:employees:map": "vitest run test/resources/employees/employeesMap.test.ts",
+        "test:employees:json": "vitest run test/resources/employees/employeesJson.test.ts",
+        "test:employees:dto": "vitest run test/resources/employees/employeesDto.test.ts",
+        "test:events": "vitest run test/resources/events/events.test.ts",
+        "test:events:map": "vitest run test/resources/events/eventsMap.test.ts",
+        "test:events:json": "vitest run test/resources/events/eventsJson.test.ts",
+        "test:events:dto": "vitest run test/resources/events/eventsDto.test.ts",
+        "test:express": "vitest run test/resources/express/express.test.ts",
+        "test:express:map": "vitest run test/resources/express/expressMap.test.ts",
+        "test:express:json": "vitest run test/resources/express/expressJson.test.ts",
+        "test:express:dto": "vitest run test/resources/express/expressDto.test.ts",
+        "test:externalDatabases": "vitest run test/resources/externalDatabases/externalDatabases.test.ts",
+        "test:externalDatabases:map": "vitest run test/resources/externalDatabases/externalDatabasesMap.test.ts",
+        "test:externalDatabases:json": "vitest run test/resources/externalDatabases/externalDatabasesJson.test.ts",
+        "test:externalDatabases:dto": "vitest run test/resources/externalDatabases/externalDatabasesDto.test.ts",
+        "test:fulfillmentProfiles": "vitest run test/resources/fulfillmentProfiles/fulfillmentProfiles.test.ts",
+        "test:fulfillmentProfiles:map": "vitest run test/resources/fulfillmentProfiles/fulfillmentProfilesMap.test.ts",
+        "test:fulfillmentProfiles:json": "vitest run test/resources/fulfillmentProfiles/fulfillmentProfilesJson.test.ts",
+        "test:fulfillmentProfiles:dto": "vitest run test/resources/fulfillmentProfiles/fulfillmentProfilesDto.test.ts",
+        "test:fulfillmentTerms": "vitest run test/resources/fulfillmentTerms/fulfillmentTerms.test.ts",
+        "test:fulfillmentTerms:map": "vitest run test/resources/fulfillmentTerms/fulfillmentTermsMap.test.ts",
+        "test:fulfillmentTerms:json": "vitest run test/resources/fulfillmentTerms/fulfillmentTermsJson.test.ts",
+        "test:fulfillmentTerms:dto": "vitest run test/resources/fulfillmentTerms/fulfillmentTermsDto.test.ts",
+        "test:giftCertificates": "vitest run test/resources/giftCertificates/giftCertificates.test.ts",
+        "test:giftCertificates:map": "vitest run test/resources/giftCertificates/giftCertificatesMap.test.ts",
+        "test:giftCertificates:json": "vitest run test/resources/giftCertificates/giftCertificatesJson.test.ts",
+        "test:giftCertificates:dto": "vitest run test/resources/giftCertificates/giftCertificatesDto.test.ts",
+        "test:integrationConnections": "vitest run test/resources/integrationConnections/integrationConnections.test.ts",
+        "test:integrationConnections:map": "vitest run test/resources/integrationConnections/integrationConnectionsMap.test.ts",
+        "test:integrationConnections:json": "vitest run test/resources/integrationConnections/integrationConnectionsJson.test.ts",
+        "test:integrationConnections:dto": "vitest run test/resources/integrationConnections/integrationConnectionsDto.test.ts",
+        "test:inventoryAdjustments": "vitest run test/resources/inventoryAdjustments/inventoryAdjustments.test.ts",
+        "test:inventoryAdjustments:map": "vitest run test/resources/inventoryAdjustments/inventoryAdjustmentsMap.test.ts",
+        "test:inventoryAdjustments:json": "vitest run test/resources/inventoryAdjustments/inventoryAdjustmentsJson.test.ts",
+        "test:inventoryAdjustments:dto": "vitest run test/resources/inventoryAdjustments/inventoryAdjustmentsDto.test.ts",
+        "test:invoiceTerms": "vitest run test/resources/invoiceTerms/invoiceTerms.test.ts",
+        "test:invoiceTerms:map": "vitest run test/resources/invoiceTerms/invoiceTermsMap.test.ts",
+        "test:invoiceTerms:json": "vitest run test/resources/invoiceTerms/invoiceTermsJson.test.ts",
+        "test:invoiceTerms:dto": "vitest run test/resources/invoiceTerms/invoiceTermsDto.test.ts",
+        "test:invoices": "vitest run test/resources/invoices/invoices.test.ts",
+        "test:invoices:map": "vitest run test/resources/invoices/invoicesMap.test.ts",
+        "test:invoices:json": "vitest run test/resources/invoices/invoicesJson.test.ts",
+        "test:invoices:dto": "vitest run test/resources/invoices/invoicesDto.test.ts",
+        "test:itemFulfillments": "vitest run test/resources/itemFulfillments/itemFulfillments.test.ts",
+        "test:itemFulfillments:map": "vitest run test/resources/itemFulfillments/itemFulfillmentsMap.test.ts",
+        "test:itemFulfillments:json": "vitest run test/resources/itemFulfillments/itemFulfillmentsJson.test.ts",
+        "test:itemFulfillments:dto": "vitest run test/resources/itemFulfillments/itemFulfillmentsDto.test.ts",
+        "test:itemReceipts": "vitest run test/resources/itemReceipts/itemReceipts.test.ts",
+        "test:itemReceipts:map": "vitest run test/resources/itemReceipts/itemReceiptsMap.test.ts",
+        "test:itemReceipts:json": "vitest run test/resources/itemReceipts/itemReceiptsJson.test.ts",
+        "test:itemReceipts:dto": "vitest run test/resources/itemReceipts/itemReceiptsDto.test.ts",
+        "test:items": "vitest run test/resources/items/items.test.ts",
+        "test:items:map": "vitest run test/resources/items/itemsMap.test.ts",
+        "test:items:json": "vitest run test/resources/items/itemsJson.test.ts",
+        "test:items:dto": "vitest run test/resources/items/itemsDto.test.ts",
+        "test:labours": "vitest run test/resources/labours/labours.test.ts",
+        "test:labours:map": "vitest run test/resources/labours/laboursMap.test.ts",
+        "test:labours:json": "vitest run test/resources/labours/laboursJson.test.ts",
+        "test:labours:dto": "vitest run test/resources/labours/laboursDto.test.ts",
+        "test:milestones": "vitest run test/resources/milestones/milestones.test.ts",
+        "test:milestones:map": "vitest run test/resources/milestones/milestonesMap.test.ts",
+        "test:milestones:json": "vitest run test/resources/milestones/milestonesJson.test.ts",
+        "test:milestones:dto": "vitest run test/resources/milestones/milestonesDto.test.ts",
+        "test:noteAttachments": "vitest run test/resources/noteAttachments/noteAttachments.test.ts",
+        "test:noteAttachments:map": "vitest run test/resources/noteAttachments/noteAttachmentsMap.test.ts",
+        "test:noteAttachments:json": "vitest run test/resources/noteAttachments/noteAttachmentsJson.test.ts",
+        "test:noteAttachments:dto": "vitest run test/resources/noteAttachments/noteAttachmentsDto.test.ts",
+        "test:noteGroups": "vitest run test/resources/noteGroups/noteGroups.test.ts",
+        "test:noteGroups:map": "vitest run test/resources/noteGroups/noteGroupsMap.test.ts",
+        "test:noteGroups:json": "vitest run test/resources/noteGroups/noteGroupsJson.test.ts",
+        "test:noteGroups:dto": "vitest run test/resources/noteGroups/noteGroupsDto.test.ts",
+        "test:orders": "vitest run test/resources/orders/orders.test.ts",
+        "test:orders:map": "vitest run test/resources/orders/ordersMap.test.ts",
+        "test:orders:json": "vitest run test/resources/orders/ordersJson.test.ts",
+        "test:orders:dto": "vitest run test/resources/orders/ordersDto.test.ts",
+        "test:organisation": "vitest run test/resources/organisation/organisation.test.ts",
+        "test:organisation:map": "vitest run test/resources/organisation/organisationMap.test.ts",
+        "test:organisation:json": "vitest run test/resources/organisation/organisationJson.test.ts",
+        "test:organisation:dto": "vitest run test/resources/organisation/organisationDto.test.ts",
+        "test:organisations": "vitest run test/resources/organisations/organisations.test.ts",
+        "test:organisations:map": "vitest run test/resources/organisations/organisationsMap.test.ts",
+        "test:organisations:json": "vitest run test/resources/organisations/organisationsJson.test.ts",
+        "test:organisations:dto": "vitest run test/resources/organisations/organisationsDto.test.ts",
+        "test:payments": "vitest run test/resources/payments/payments.test.ts",
+        "test:payments:map": "vitest run test/resources/payments/paymentsMap.test.ts",
+        "test:payments:json": "vitest run test/resources/payments/paymentsJson.test.ts",
+        "test:payments:dto": "vitest run test/resources/payments/paymentsDto.test.ts",
+        "test:portals": "vitest run test/resources/portals/portals.test.ts",
+        "test:portals:map": "vitest run test/resources/portals/portalsMap.test.ts",
+        "test:portals:json": "vitest run test/resources/portals/portalsJson.test.ts",
+        "test:portals:dto": "vitest run test/resources/portals/portalsDto.test.ts",
+        "test:pricingPeriods": "vitest run test/resources/pricingPeriods/pricingPeriods.test.ts",
+        "test:pricingPeriods:map": "vitest run test/resources/pricingPeriods/pricingPeriodsMap.test.ts",
+        "test:pricingPeriods:json": "vitest run test/resources/pricingPeriods/pricingPeriodsJson.test.ts",
+        "test:pricingPeriods:dto": "vitest run test/resources/pricingPeriods/pricingPeriodsDto.test.ts",
+        "test:proformaInvoices": "vitest run test/resources/proformaInvoices/proformaInvoices.test.ts",
+        "test:proformaInvoices:map": "vitest run test/resources/proformaInvoices/proformaInvoicesMap.test.ts",
+        "test:proformaInvoices:json": "vitest run test/resources/proformaInvoices/proformaInvoicesJson.test.ts",
+        "test:proformaInvoices:dto": "vitest run test/resources/proformaInvoices/proformaInvoicesDto.test.ts",
+        "test:purchaseCreditNoteApplications": "vitest run test/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplications.test.ts",
+        "test:purchaseCreditNoteApplications:map": "vitest run test/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsMap.test.ts",
+        "test:purchaseCreditNoteApplications:json": "vitest run test/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsJson.test.ts",
+        "test:purchaseCreditNoteApplications:dto": "vitest run test/resources/purchaseCreditNoteApplications/purchaseCreditNoteApplicationsDto.test.ts",
+        "test:purchaseCreditNotes": "vitest run test/resources/purchaseCreditNotes/purchaseCreditNotes.test.ts",
+        "test:purchaseCreditNotes:map": "vitest run test/resources/purchaseCreditNotes/purchaseCreditNotesMap.test.ts",
+        "test:purchaseCreditNotes:json": "vitest run test/resources/purchaseCreditNotes/purchaseCreditNotesJson.test.ts",
+        "test:purchaseCreditNotes:dto": "vitest run test/resources/purchaseCreditNotes/purchaseCreditNotesDto.test.ts",
+        "test:purchaseExpress": "vitest run test/resources/purchaseExpress/purchaseExpress.test.ts",
+        "test:purchaseExpress:map": "vitest run test/resources/purchaseExpress/purchaseExpressMap.test.ts",
+        "test:purchaseExpress:json": "vitest run test/resources/purchaseExpress/purchaseExpressJson.test.ts",
+        "test:purchaseExpress:dto": "vitest run test/resources/purchaseExpress/purchaseExpressDto.test.ts",
+        "test:purchaseInvoices": "vitest run test/resources/purchaseInvoices/purchaseInvoices.test.ts",
+        "test:purchaseInvoices:map": "vitest run test/resources/purchaseInvoices/purchaseInvoicesMap.test.ts",
+        "test:purchaseInvoices:json": "vitest run test/resources/purchaseInvoices/purchaseInvoicesJson.test.ts",
+        "test:purchaseInvoices:dto": "vitest run test/resources/purchaseInvoices/purchaseInvoicesDto.test.ts",
+        "test:purchaseOrders": "vitest run test/resources/purchaseOrders/purchaseOrders.test.ts",
+        "test:purchaseOrders:map": "vitest run test/resources/purchaseOrders/purchaseOrdersMap.test.ts",
+        "test:purchaseOrders:json": "vitest run test/resources/purchaseOrders/purchaseOrdersJson.test.ts",
+        "test:purchaseOrders:dto": "vitest run test/resources/purchaseOrders/purchaseOrdersDto.test.ts",
+        "test:purchasePayments": "vitest run test/resources/purchasePayments/purchasePayments.test.ts",
+        "test:purchasePayments:map": "vitest run test/resources/purchasePayments/purchasePaymentsMap.test.ts",
+        "test:purchasePayments:json": "vitest run test/resources/purchasePayments/purchasePaymentsJson.test.ts",
+        "test:purchasePayments:dto": "vitest run test/resources/purchasePayments/purchasePaymentsDto.test.ts",
+        "test:purchaseRefunds": "vitest run test/resources/purchaseRefunds/purchaseRefunds.test.ts",
+        "test:purchaseRefunds:map": "vitest run test/resources/purchaseRefunds/purchaseRefundsMap.test.ts",
+        "test:purchaseRefunds:json": "vitest run test/resources/purchaseRefunds/purchaseRefundsJson.test.ts",
+        "test:purchaseRefunds:dto": "vitest run test/resources/purchaseRefunds/purchaseRefundsDto.test.ts",
+        "test:quoteOrders": "vitest run test/resources/quoteOrders/quoteOrders.test.ts",
+        "test:quoteOrders:map": "vitest run test/resources/quoteOrders/quoteOrdersMap.test.ts",
+        "test:quoteOrders:json": "vitest run test/resources/quoteOrders/quoteOrdersJson.test.ts",
+        "test:quoteOrders:dto": "vitest run test/resources/quoteOrders/quoteOrdersDto.test.ts",
+        "test:receiveTerms": "vitest run test/resources/receiveTerms/receiveTerms.test.ts",
+        "test:receiveTerms:map": "vitest run test/resources/receiveTerms/receiveTermsMap.test.ts",
+        "test:receiveTerms:json": "vitest run test/resources/receiveTerms/receiveTermsJson.test.ts",
+        "test:receiveTerms:dto": "vitest run test/resources/receiveTerms/receiveTermsDto.test.ts",
+        "test:reconciliations": "vitest run test/resources/reconciliations/reconciliations.test.ts",
+        "test:reconciliations:map": "vitest run test/resources/reconciliations/reconciliationsMap.test.ts",
+        "test:reconciliations:json": "vitest run test/resources/reconciliations/reconciliationsJson.test.ts",
+        "test:reconciliations:dto": "vitest run test/resources/reconciliations/reconciliationsDto.test.ts",
+        "test:refunds": "vitest run test/resources/refunds/refunds.test.ts",
+        "test:refunds:map": "vitest run test/resources/refunds/refundsMap.test.ts",
+        "test:refunds:json": "vitest run test/resources/refunds/refundsJson.test.ts",
+        "test:refunds:dto": "vitest run test/resources/refunds/refundsDto.test.ts",
+        "test:rentalAssets": "vitest run test/resources/rentalAssets/rentalAssets.test.ts",
+        "test:rentalAssets:map": "vitest run test/resources/rentalAssets/rentalAssetsMap.test.ts",
+        "test:rentalAssets:json": "vitest run test/resources/rentalAssets/rentalAssetsJson.test.ts",
+        "test:rentalAssets:dto": "vitest run test/resources/rentalAssets/rentalAssetsDto.test.ts",
+        "test:reports": "vitest run test/resources/reports/reports.test.ts",
+        "test:reports:map": "vitest run test/resources/reports/reportsMap.test.ts",
+        "test:reports:json": "vitest run test/resources/reports/reportsJson.test.ts",
+        "test:reports:dto": "vitest run test/resources/reports/reportsDto.test.ts",
+        "test:returnMerchandiseAuthorisations": "vitest run test/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisations.test.ts",
+        "test:returnMerchandiseAuthorisations:map": "vitest run test/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsMap.test.ts",
+        "test:returnMerchandiseAuthorisations:json": "vitest run test/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsJson.test.ts",
+        "test:returnMerchandiseAuthorisations:dto": "vitest run test/resources/returnMerchandiseAuthorisations/returnMerchandiseAuthorisationsDto.test.ts",
+        "test:returnVendorAuthorizations": "vitest run test/resources/returnVendorAuthorizations/returnVendorAuthorizations.test.ts",
+        "test:returnVendorAuthorizations:map": "vitest run test/resources/returnVendorAuthorizations/returnVendorAuthorizationsMap.test.ts",
+        "test:returnVendorAuthorizations:json": "vitest run test/resources/returnVendorAuthorizations/returnVendorAuthorizationsJson.test.ts",
+        "test:returnVendorAuthorizations:dto": "vitest run test/resources/returnVendorAuthorizations/returnVendorAuthorizationsDto.test.ts",
+        "test:roles": "vitest run test/resources/roles/roles.test.ts",
+        "test:roles:map": "vitest run test/resources/roles/rolesMap.test.ts",
+        "test:roles:json": "vitest run test/resources/roles/rolesJson.test.ts",
+        "test:roles:dto": "vitest run test/resources/roles/rolesDto.test.ts",
+        "test:salesReps": "vitest run test/resources/salesReps/salesReps.test.ts",
+        "test:salesReps:map": "vitest run test/resources/salesReps/salesRepsMap.test.ts",
+        "test:salesReps:json": "vitest run test/resources/salesReps/salesRepsJson.test.ts",
+        "test:salesReps:dto": "vitest run test/resources/salesReps/salesRepsDto.test.ts",
+        "test:salutations": "vitest run test/resources/salutations/salutations.test.ts",
+        "test:salutations:map": "vitest run test/resources/salutations/salutationsMap.test.ts",
+        "test:salutations:json": "vitest run test/resources/salutations/salutationsJson.test.ts",
+        "test:salutations:dto": "vitest run test/resources/salutations/salutationsDto.test.ts",
+        "test:settings": "vitest run test/resources/settings/settings.test.ts",
+        "test:settings:map": "vitest run test/resources/settings/settingsMap.test.ts",
+        "test:settings:json": "vitest run test/resources/settings/settingsJson.test.ts",
+        "test:settings:dto": "vitest run test/resources/settings/settingsDto.test.ts",
+        "test:settingsWorkflows": "vitest run test/resources/settingsWorkflows/settingsWorkflows.test.ts",
+        "test:settingsWorkflows:map": "vitest run test/resources/settingsWorkflows/settingsWorkflowsMap.test.ts",
+        "test:settingsWorkflows:json": "vitest run test/resources/settingsWorkflows/settingsWorkflowsJson.test.ts",
+        "test:settingsWorkflows:dto": "vitest run test/resources/settingsWorkflows/settingsWorkflowsDto.test.ts",
+        "test:shippingPackages": "vitest run test/resources/shippingPackages/shippingPackages.test.ts",
+        "test:shippingPackages:map": "vitest run test/resources/shippingPackages/shippingPackagesMap.test.ts",
+        "test:shippingPackages:json": "vitest run test/resources/shippingPackages/shippingPackagesJson.test.ts",
+        "test:shippingPackages:dto": "vitest run test/resources/shippingPackages/shippingPackagesDto.test.ts",
+        "test:shippingRules": "vitest run test/resources/shippingRules/shippingRules.test.ts",
+        "test:shippingRules:map": "vitest run test/resources/shippingRules/shippingRulesMap.test.ts",
+        "test:shippingRules:json": "vitest run test/resources/shippingRules/shippingRulesJson.test.ts",
+        "test:shippingRules:dto": "vitest run test/resources/shippingRules/shippingRulesDto.test.ts",
+        "test:systemEvents": "vitest run test/resources/systemEvents/systemEvents.test.ts",
+        "test:systemEvents:map": "vitest run test/resources/systemEvents/systemEventsMap.test.ts",
+        "test:systemEvents:json": "vitest run test/resources/systemEvents/systemEventsJson.test.ts",
+        "test:systemEvents:dto": "vitest run test/resources/systemEvents/systemEventsDto.test.ts",
+        "test:tasks": "vitest run test/resources/tasks/tasks.test.ts",
+        "test:tasks:map": "vitest run test/resources/tasks/tasksMap.test.ts",
+        "test:tasks:json": "vitest run test/resources/tasks/tasksJson.test.ts",
+        "test:tasks:dto": "vitest run test/resources/tasks/tasksDto.test.ts",
+        "test:teams": "vitest run test/resources/teams/teams.test.ts",
+        "test:teams:map": "vitest run test/resources/teams/teamsMap.test.ts",
+        "test:teams:json": "vitest run test/resources/teams/teamsJson.test.ts",
+        "test:teams:dto": "vitest run test/resources/teams/teamsDto.test.ts",
+        "test:timePeriods": "vitest run test/resources/timePeriods/timePeriods.test.ts",
+        "test:timePeriods:map": "vitest run test/resources/timePeriods/timePeriodsMap.test.ts",
+        "test:timePeriods:json": "vitest run test/resources/timePeriods/timePeriodsJson.test.ts",
+        "test:timePeriods:dto": "vitest run test/resources/timePeriods/timePeriodsDto.test.ts",
+        "test:timesheets": "vitest run test/resources/timesheets/timesheets.test.ts",
+        "test:timesheets:map": "vitest run test/resources/timesheets/timesheetsMap.test.ts",
+        "test:timesheets:json": "vitest run test/resources/timesheets/timesheetsJson.test.ts",
+        "test:timesheets:dto": "vitest run test/resources/timesheets/timesheetsDto.test.ts",
+        "test:uom": "vitest run test/resources/uom/uom.test.ts",
+        "test:uom:map": "vitest run test/resources/uom/uomMap.test.ts",
+        "test:uom:json": "vitest run test/resources/uom/uomJson.test.ts",
+        "test:uom:dto": "vitest run test/resources/uom/uomDto.test.ts",
+        "test:usages": "vitest run test/resources/usages/usages.test.ts",
+        "test:usages:map": "vitest run test/resources/usages/usagesMap.test.ts",
+        "test:usages:json": "vitest run test/resources/usages/usagesJson.test.ts",
+        "test:usages:dto": "vitest run test/resources/usages/usagesDto.test.ts",
+        "test:webhooks": "vitest run test/resources/webhooks/webhooks.test.ts",
+        "test:webhooks:map": "vitest run test/resources/webhooks/webhooksMap.test.ts",
+        "test:webhooks:json": "vitest run test/resources/webhooks/webhooksJson.test.ts",
+        "test:webhooks:dto": "vitest run test/resources/webhooks/webhooksDto.test.ts",
+        "test:workflows": "vitest run test/resources/workflows/workflows.test.ts",
+        "test:workflows:map": "vitest run test/resources/workflows/workflowsMap.test.ts",
+        "test:workflows:json": "vitest run test/resources/workflows/workflowsJson.test.ts",
+        "test:workflows:dto": "vitest run test/resources/workflows/workflowsDto.test.ts",
+        "test:zones": "vitest run test/resources/zones/zones.test.ts",
+        "test:zones:map": "vitest run test/resources/zones/zonesMap.test.ts",
+        "test:zones:json": "vitest run test/resources/zones/zonesJson.test.ts",
+        "test:zones:dto": "vitest run test/resources/zones/zonesDto.test.ts",
+        "build": "npm run build:esm && npm run build:cjs && npm run build:cjs:pkg",
+        "build:esm": "tsc -p tsconfig.build.json",
+        "build:cjs": "tsc -p tsconfig.cjs.json",
+        "build:cjs:pkg": "node -e \"require('fs').writeFileSync('dist/cjs/package.json', JSON.stringify({type:'commonjs'}))\"",
+        "typecheck": "tsc --noEmit",
+        "prepare": "npm run build",
+        "prepack": "npm run build",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "keywords": [
+        "exsited",
+        "billing",
+        "sdk",
+        "rest",
+        "api-client",
+        "oauth2"
+    ],
+    "devDependencies": {
+        "@types/node": "^22",
+        "prettier": "^3.9.6",
+        "typescript": "^5.9.3",
+        "vitest": "^2"
+    }
+}

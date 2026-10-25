@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# npm pack / publish output
+*.tgz
+
+# Build output: `npm run build` compiles it, and `prepack` rebuilds it for a published tarball.
+dist/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local-only scratch work, never part of the package.
+scratch/
+
+# Captured live responses: real bodies from the dev instance, some holding real people's
+# contact details. measurements.json, which keeps field names and types only, is what gets committed.
+captures/
+sweep_result.json
+
+# A token cache pointed at the repository holds a live access token, refresh token and client secret.
+token.json
+*_token.json
+
+# Credentials. A local one is optional -- the variables can come from the
+# environment or a secret manager -- but if you make one it must never be
+# committed.
+.env
+.env.*
+!.env.example
